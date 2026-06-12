@@ -7,7 +7,7 @@ export function Main() {
                 <h1 className="title_main">Small Home Problems Become Expensive Repairs When Ignored.</h1>
                 <p className="subtitle_main">We help homeowners take care of the small maintenance tasks they've been putting off before they become costly problems.</p>
                 <p className="subtitle_main">Fix the small thing today.</p>
-                <Boton title="Schedule a Free Evaluation" />
+                <Boton iconPhone={false} title="Schedule a Free Evaluation" />
             </section>
             <section className="section2_main">
                 <h2 className="title_main">Are Any of These Issues Familiar?</h2>
@@ -48,6 +48,8 @@ export function Main() {
             </section>
             <section className="section7_main">
                 <h4 className="title_main"> Let's Take Care of Those Small Problems Before They Become Bigger Ones</h4>
+                <p>Contact us!</p>
+                <Boton iconPhone={true} title="(954) 980-1010"/>
             </section>
         </div>
     )
