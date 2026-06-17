@@ -13,11 +13,11 @@ export function NavBar() {
             <img src={logo} alt="logo" className="logo" />
             <nav className={`navbar ${isOpen ? 'menu-open' : ''}`}>
                 <ul className="list_menu_links">
-                    <li><a href="#" className="a_menu_links">Servicios</a></li>
-                    <li><a href="#" className="a_menu_links">Por qué elegirnos</a></li>
-                    <li><a href="#" className="a_menu_links">Proyectos</a></li>
-                    <li><a href="#" className="a_menu_links">Testimonios</a></li>
-                    <li><a href="#" className="a_menu_links">Contacto</a></li>
+                    <li><a href="#" className="a_menu_links">Services</a></li>
+                    <li><a href="#" className="a_menu_links">Why choose us</a></li>
+                    <li><a href="#" className="a_menu_links">About us</a></li>
+                    <li><a href="#" className="a_menu_links">Reviews</a></li>
+                    <li><a href="#" className="a_menu_links">Contact</a></li>
                 </ul>
             </nav>
             <FontAwesomeIcon icon={ faBars } alt="menu" onClick={toggleMenu} className={`menu-bars ${isOpen ? 'is-active' : ''}`}/>

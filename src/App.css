@@ -5,6 +5,7 @@
 
 .body_init {
   display: grid;
+  background-color: #fff;
   font-family: Barlow;
 }
 
@@ -103,12 +104,12 @@ section {
   flex-direction: column;
   background-image: linear-gradient(to right, #ffffffc2, #ffffff17 140%), url('./assets/img_main.jpg');
   background-size: cover;
-  background-position: right 60% bottom 2rem;
+  background-position: right 60% bottom ;
   background-repeat: no-repeat;
 }
 
 .p-contact {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: #011337;
 }
@@ -120,12 +121,11 @@ section {
 
 .secondary-t {
   text-align: center;
-  width: 100%;
+  padding: 0 0.5em;
 }
 
 .subtitle_main {
-  max-width: 80%;
-  margin: 0.2em 0 0.4em 0;
+  margin: 0.4em 0 0.6em 0;
   font-size: 1.4rem;
   font-weight: 500;
   color: #011337;
@@ -133,6 +133,7 @@ section {
 
 #aux-p {
   max-width: 100%;
+  padding: 0 0.5em;
   text-align: center;
 }
 
@@ -140,24 +141,37 @@ section {
   margin-bottom: 1em;
 }
 
-/*SECTION 2*/
+/*SECCION 2*/
 
 .section2_main ul, .section5_main ul {
-  padding-right: 1em;
+  text-align: center;
+  list-style: none;
+  width: 90%;
+  margin: auto;
+  padding: 0;
 }
 
 .section2_main {
   padding: 0;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23fb4e02' fill-opacity='0.19'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-/*SECTION 3*/
+.p-subtext {
+  color: #011337;
+  font-size: 1.2rem;
+  margin: 2em 0 1em 1em;
+}
+
+/*SECCION 3*/
 
 .section3_main {
   padding: 0;
 }
 
 .div-services {
-  margin: 2em 0 2em 0;
+  margin: 2em auto 2em auto;
+  width: 90%;
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -165,19 +179,35 @@ section {
 }
 
 .elem-service {
-  width: 80%;
+  width: 85%;
   gap: 20px;
   display: flex;
   align-items: center;
 }
 
-.elem-p {
+.elem-p, .elem-p-service {
   font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #011337;
+}
+
+/*SECCION 5*/
+
+.subtitle-sec5 {
+  font-size: 1.4rem;
   font-weight: 500;
   color: #011337;
 }
 
-.section7_main {
+.p-sec5 {
+  font-size: 1.3rem;
+  color: #011337;
+}
+
+/*SECCION 6*/
+
+.section6_main {
   margin-bottom: 20px;
 }
 
@@ -228,6 +258,14 @@ section {
 
 .btn_schedule:hover {
   color: #fff;
+  .icon-phone {
+    color: #fff;
+  }
+}
+
+.icon-phone {
+  color: #011337;
+  transition: all .3s;
 }
 
 .btn_schedule:hover:before {
@@ -237,9 +275,10 @@ section {
 /*FOOTER*/
 
 .footer {
-  display: grid;
+  display: flex;
   background-image: linear-gradient(to right, #011337, #000a1c 100%);
-  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .d-footer-info {
@@ -248,6 +287,8 @@ section {
 
 .p-footer {
   font-size: 1.3rem;
+  word-break: break-word;
+  width: 80%;
   color: #FB4E02;
 }
 
@@ -256,18 +297,13 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-right: 10px;
+  gap: 1em;
+  margin-right: 15px;
 }
 
 .i-social {
   font-size: 2rem;
   cursor: pointer;
-}
-
-.d-social-aux {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 /*MEDIA QUERYS*/
@@ -323,7 +359,7 @@ section {
   }
 
   .title-main {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 
   .main-t {
@@ -335,17 +371,28 @@ section {
     max-width: 600px;
   }
 
-  /*SECTION 2*/
+  .elem-p {
+    font-size: 1.3rem;
+    text-align: start;
+  }
+
+  .elem-p-service {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  /*SECCION 2*/
 
   .section2_main ul, .section5_main ul {
-    text-align: center;
-    list-style: none;
+    width: 550px;
+    margin: auto;
   }
 
   /*SECTION 3*/
 
   .div-services {
     flex-direction: row;
+    width: 100%;
     margin: 3em 0 1em 0;
   }
 
@@ -354,14 +401,37 @@ section {
     gap: 0;
   }
 
+  /*SECCION 5*/
+
+  .div-p-sec5 {
+    width: 550px;
+    margin: auto;
+  }
+
+  /*SECCION 6*/
+
+  #last-title {
+    width: 70%;
+    margin: 1em auto;
+  }
+
+  .d-sec6 {
+    width: 70%;
+    margin: auto;
+  }
+
   /*FOOTER*/
 
-  .d-social-aux {
-    flex-direction: row;
+  .p-footer {
+    width: 100%;
   }
 
   .i-social {
     font-size: 2.3rem;
+  }
+
+  .d-social {
+    margin-right: 1em;
   }
 
 }

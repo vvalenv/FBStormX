@@ -11,13 +11,10 @@ export function Footer() {
                 <p className="p-footer"><FontAwesomeIcon icon={faCircleCheck} style={{color: "#fb4e02",}} /> Satisfaction guaranteed</p>
                 <p className="p-footer"><FontAwesomeIcon icon={faShieldHalved} style={{color: "#fb4e02",}} /> Licensed and injured</p>
             </div>
-            <div className="d-social">
-                <p className="p-footer">Social media</p>
-                <div className='d-social-aux'>
-                    <FontAwesomeIcon icon={faInstagram} style={{color: "#FB4E02",}} className='i-social' />
-                    <FontAwesomeIcon icon={faFacebook} style={{color: "#fb4e02",}} className='i-social' />
-                    <FontAwesomeIcon icon={faYoutube} style={{color: "#fb4e02",}} className='i-social' />
-                </div>
+            <div className='d-social'>
+                <FontAwesomeIcon icon={faInstagram} style={{color: "#FB4E02",}} className='i-social' />
+                <FontAwesomeIcon icon={faFacebook} style={{color: "#fb4e02",}} className='i-social' />
+                <FontAwesomeIcon icon={faYoutube} style={{color: "#fb4e02",}} className='i-social' />
             </div>
         </footer>
     )
