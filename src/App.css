@@ -306,6 +306,55 @@ section {
   cursor: pointer;
 }
 
+/*CONTACTO*/
+
+  .main-contact {
+    min-height: 60vh;
+  }
+
+  .form-contact {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5em;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px #011337;
+    padding: 1em;
+    width: 80%;
+    color: #011337;
+    border-radius: 15px;
+    background-color: #fb4d02c8;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Por defecto, los inputs normales ocupan 3 de las 6 columnas (la mitad de la pantalla) */
+    grid-column: span 6;
+  }
+
+  .form-group input,textarea,select {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px #011337;
+  }
+
+  .submit-contact {
+    font-size: 1.3rem;
+    padding: 0.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+
 /*MEDIA QUERYS*/
 
 @media screen and (min-width: 800px) {
@@ -342,6 +391,27 @@ section {
 
   .a_menu_links:hover {
     color: #fff;
+  }
+
+  /*CONTACT*/
+
+  .form-group {
+    grid-column: span 3;
+  }
+
+  .form-group:nth-last-child(4),
+  .form-group:nth-last-child(3),
+  .form-group:nth-last-child(2) {
+    grid-column: span 2;
+  }
+
+  .d-textarea {
+    grid-column: span 6;
+  }
+
+  .submit-contact {
+    grid-column: span 6;
+    margin-top: 1em;
   }
 
   /*MAIN*/
@@ -420,6 +490,7 @@ section {
     margin: auto;
   }
 
+  
   /*FOOTER*/
 
   .p-footer {

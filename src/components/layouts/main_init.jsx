@@ -5,9 +5,14 @@ import windowIcon from "../../assets/icons/window.png";
 import construction from "../../assets/icons/construction.png";
 import truck from "../../assets/icons/truck.png";
 import glue from "../../assets/icons/glue.png";
+import { useNavigate } from 'react-router-dom';
 
 
 export function Main() {
+    const navigate = useNavigate();
+    const navegaC = () => {
+        navigate('/contact'); 
+    };
     return (
         <div className="div_main">
             <section className="section1_main">
@@ -15,7 +20,7 @@ export function Main() {
                 <p className="subtitle_main">We help homeowners take care of the small maintenance tasks they've been putting off before they become costly problems.</p>
                 <p className="subtitle_main aux">Fix the small thing today.</p>
                 <div>
-                    <Boton iconPhone={false} title="Schedule a Free Evaluation" />
+                    <Boton contact={navegaC} iconPhone={false} title="Schedule a Free Evaluation"/>
                     <div>
                         <p className="p-contact">Call us today!</p>
                         <Boton iconPhone={true} title=" (954) 980-1010"/>
