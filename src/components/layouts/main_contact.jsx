@@ -619,9 +619,9 @@ export function Contact() {
                     <option value="YE">YE</option>
                     <option value="ZM">ZM</option>
                     <option value="ZW">ZW</option>
-                    </select>
+                </select>
             </div>
-            <div class="g-recaptcha" data-sitekey="6LdD7iETAAAAAJ_9FDMD7wwFs2-Wx6CK65KFBeXh"></div>
+            
             <input type="submit" name="submit" className="submit-contact"/>
         </form>
     </div>   
