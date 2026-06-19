@@ -1,18 +1,24 @@
 import { useState } from 'react';
-export function Contact(utmSource) {
-    console.log(utmSource);
+export function Contact() {
     const [origen] = useState(() => {
-        // 1. Validamos si estamos en el navegador (para evitar errores en Vercel)
         if (typeof window === 'undefined' || typeof document === 'undefined') {
             return 'Directo / Desconocido';
         }
+
+        // 1. Primero intentamos leer el localStorage por si el usuario ya estuvo navegando
+        const origenGuardado = localStorage.getItem('origen_marketing');
+        if (origenGuardado) {
+            return origenGuardado;
+        }
+
+        // 2. Por las dudas, si entró DIRECTAMENTE a esta sección desde Instagram con el UTM, lo leemos de la URL
+        const params = new URLSearchParams(window.location.search);
+        const utmSource = params.get('utm_source');
         if (utmSource) {
+            localStorage.setItem('origen_marketing', utmSource); // Lo guardamos para el futuro
+            console.log(utmSource);
             return utmSource;
         }   
-        if (document.referrer) {
-            if (document.referrer.includes('instagram.com')) return 'instagram_bio';
-            if (document.referrer.includes('facebook.com')) return 'facebook_organic';
-        }
 
         return 'Directo / Desconocido';
     });
