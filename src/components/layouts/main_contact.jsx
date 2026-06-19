@@ -51,6 +51,10 @@ export function Contact() {
                 <label htmlFor="email">Email</label>
                 <input  id="email" maxlength="80" name="email" size="20" type="text" required />
             </div>
+            <div className="form-group">
+                <label for="zip">Zip</label>
+                <input  id="zip" maxlength="20" name="zip" size="20" type="text" />
+            </div>
             <div className="form-group d-textarea">
                  <label htmlFor="description">Service needed</label>
                  <textarea id="description" name="description"></textarea>
