@@ -1,31 +1,23 @@
 import { useState } from 'react';
-export function Contact() {
+export function Contact(utmSource) {
+    
     const [origen] = useState(() => {
-  // 1. Validamos si estamos en el navegador (para evitar errores en Vercel)
-  if (typeof window === 'undefined' || typeof document === 'undefined') {
-    return 'Directo / Desconocido';
-  }
+        // 1. Validamos si estamos en el navegador (para evitar errores en Vercel)
+        if (typeof window === 'undefined' || typeof document === 'undefined') {
+            return 'Directo / Desconocido';
+        }
+        if (utmSource) {
+            console.log("utmSource")
+            return utmSource;
+        }   
+        if (document.referrer) {
+            if (document.referrer.includes('instagram.com')) return 'instagram_bio';
+            if (document.referrer.includes('facebook.com')) return 'facebook_organic';
+        }
 
-    // 2. Ejecutamos la lógica de detección directamente aquí
-    const params = new URLSearchParams(window.location.search);
-    const utmSource = params.get('utm_source');
-    const hasFbclid = params.has('fbclid');
-
-    if (utmSource) {
-        return utmSource;
-    }
-    
-    if (hasFbclid) {
-        return 'meta_organic';
-    }
-    
-    if (document.referrer) {
-        if (document.referrer.includes('instagram.com')) return 'instagram_bio';
-        if (document.referrer.includes('facebook.com')) return 'facebook_organic';
-    }
-
-    return 'Directo / Desconocido';
+        return 'Directo / Desconocido';
     });
+
     return (
     <div className="main-contact">
         <h1 className="title_main secondary-t">Schedule your free evaluation</h1>
