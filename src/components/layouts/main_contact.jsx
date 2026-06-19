@@ -1,13 +1,12 @@
 import { useState } from 'react';
 export function Contact(utmSource) {
-    
+    console.log("utmSource");
     const [origen] = useState(() => {
         // 1. Validamos si estamos en el navegador (para evitar errores en Vercel)
         if (typeof window === 'undefined' || typeof document === 'undefined') {
             return 'Directo / Desconocido';
         }
         if (utmSource) {
-            console.log("utmSource")
             return utmSource;
         }   
         if (document.referrer) {
