@@ -1,0 +1,50 @@
+/*FOOTER*/
+
+.footer {
+  display: flex;
+  background-image: linear-gradient(to right, #011337, #000a1c 100%);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-footer-info {
+  margin-left: 1em;
+}
+
+.p-footer {
+  font-size: 1.3rem;
+  word-break: break-word;
+  width: 80%;
+  color: #FB4E02;
+}
+
+.d-social {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  margin-right: 15px;
+}
+
+.i-social {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+/*FOOTER*/
+
+  .p-footer {
+    width: 100%;
+  }
+
+  .i-social {
+    font-size: 2.3rem;
+  }
+
+  .d-social {
+    margin-right: 1em;
+  }
+
+}

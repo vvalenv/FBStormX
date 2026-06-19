@@ -1,0 +1,202 @@
+/*MAIN*/
+
+.div_main {
+  display: grid;
+}
+
+section {
+  padding: 0 1em 0 1em;
+}
+
+/*SECCION 1*/
+
+.section1_main {
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #ffffffc2, #ffffff17 140%), url('../assets/img_main.jpg');
+  background-size: cover;
+  background-position: right 60% bottom ;
+  background-repeat: no-repeat;
+}
+
+.p-contact {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #011337;
+}
+
+.title_main {
+  font-size: 2.3rem;
+  color: #011337;
+}
+
+.secondary-t {
+  text-align: center;
+  padding: 0 0.5em;
+}
+
+.subtitle_main {
+  margin: 0.4em 0 0.6em 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #011337;
+}
+
+#aux-p {
+  max-width: 100%;
+  padding: 0 0.5em;
+  text-align: center;
+}
+
+.aux {
+  margin-bottom: 1em;
+}
+
+/*SECCION 2*/
+
+.section2_main ul, .section5_main ul {
+  text-align: center;
+  list-style: none;
+  width: 90%;
+  margin: auto;
+  padding: 0;
+}
+
+.section2_main {
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23fb4e02' fill-opacity='0.19'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.p-subtext {
+  color: #011337;
+  font-size: 1.2rem;
+  margin: 2em 0 1em 1em;
+}
+
+/*SECCION 3*/
+
+.section3_main {
+  padding: 0;
+}
+
+.div-services {
+  margin: 2em auto 2em auto;
+  width: 90%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.elem-service {
+  width: 85%;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.elem-p, .elem-p-service {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #011337;
+}
+
+/*SECCION 5*/
+
+.subtitle-sec5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #011337;
+}
+
+.p-sec5 {
+  font-size: 1.3rem;
+  color: #011337;
+}
+
+/*SECCION 6*/
+
+.section6_main {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 800px) {
+
+    .section1_main {
+        background-image: linear-gradient(to right, #ffffffef, #ffffff00 100%), url('./assets/img_main.jpg');
+        background-position: center;
+        height: 80vh;
+    }
+
+  .section1_main div {
+    display: flex;
+    flex-direction: row;
+    gap: 2em; 
+  }
+
+  .title-main {
+    font-size: 2.6rem;
+  }
+
+  .main-t {
+    max-width: 600px;
+    word-break: break-word;
+  }
+
+  .subtitle_main {
+    max-width: 600px;
+  }
+
+  .elem-p {
+    font-size: 1.3rem;
+    text-align: start;
+  }
+
+  .elem-p-service {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  /*SECCION 2*/
+
+  .section2_main ul, .section5_main ul {
+    width: 550px;
+    margin: auto;
+  }
+
+  /*SECTION 3*/
+
+  .div-services {
+    flex-direction: row;
+    width: 100%;
+    margin: 3em 0 1em 0;
+  }
+
+  .elem-service {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /*SECCION 5*/
+
+  .div-p-sec5 {
+    width: 550px;
+    margin: auto;
+  }
+
+  /*SECCION 6*/
+
+  #last-title {
+    width: 70%;
+    margin: 1em auto;
+  }
+
+  .d-sec6 {
+    width: 70%;
+    margin: auto;
+  }
+
+}
