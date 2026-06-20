@@ -56,7 +56,7 @@ export function Contact() {
                  <label htmlFor="description">Service needed</label>
                  <textarea id="description" name="description"></textarea>
             </div>
-            <input type="submit" name="submit" className="submit-contact"/>
+            <input type="submit" name="submit" className="submit-contact" value="Send"/>
         </form>
     </div>   
     )

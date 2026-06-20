@@ -14,9 +14,9 @@ section {
   height: 110vh;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to right, #ffffffc2, #ffffff17 140%), url('../assets/img_main.jpg');
+  background-image: linear-gradient(to right, #ffffffc2, #ffffff17 140%), url('../assets/img_main.png');
   background-size: cover;
-  background-position: right 60% bottom ;
+  background-position: right 40% bottom;
   background-repeat: no-repeat;
 }
 
@@ -126,7 +126,7 @@ section {
 @media screen and (min-width: 800px) {
 
     .section1_main {
-        background-image: linear-gradient(to right, #ffffffef, #ffffff00 100%), url('./assets/img_main.jpg');
+        background-image: linear-gradient(to right, #ffffffef, #ffffff00 100%), url('../assets/img_main.png');
         background-position: center;
         height: 80vh;
     }
