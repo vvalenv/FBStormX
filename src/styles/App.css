@@ -83,25 +83,27 @@ h1,h2,h3,h4 {
 
   .main-contact {
     min-height: 60vh;
+    background-color: #FB4E02;
   }
 
   .main-contact h1 {
     margin: 0.5em 0;
+    color: #fbfafa;
   }
 
   .form-contact {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5em;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 5px #011337;
     padding: 1em;
     width: 80%;
-    color: #fff;
+    color: #FB4E02;
     border-radius: 15px;
-    background-color: #fb4d02;
+    background-color: #fbfafa;
     margin: auto;
     margin-bottom: 2em;
   }
@@ -114,28 +116,30 @@ h1,h2,h3,h4 {
   }
 
   .form-group input,textarea,select {
-    border: none;
+    border: 1px solid #0113378f;
+    color: #FB4E02;
     outline: none;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 8px;
     font-size: 1.2rem;
-    box-shadow: 2px 2px 5px #011337;
   }
 
   .d-textarea textarea {
     resize: none;
-    height: 5em;
+    height: 3em;
     font-family: Barlow;
   }
 
   .submit-contact {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 0.5em;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 5px #011337;
-    background-color: #fff;
+    background-color: #FB4E02;
+    color: #fbfafa;
+    margin-top: 0.7em;
+    grid-column: 2 / span 2;
   }
 
 
@@ -153,6 +157,8 @@ h1,h2,h3,h4 {
 
   .form-contact {
     max-width: 550px;
+    font-size: 1.3rem;
+    margin: 0 auto 2em auto;
   }
 
   .form-group {
@@ -160,12 +166,8 @@ h1,h2,h3,h4 {
   }
 
   .d-textarea {
+    height: 5em;
     grid-column: span 4;
-  }
-
-  .submit-contact {
-    grid-column: 2 / span 2;
-    margin-top: 1em;
   }
  
 }

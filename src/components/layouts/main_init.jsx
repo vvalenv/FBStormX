@@ -1,30 +1,84 @@
-import { Boton } from "./UX-components";
 import roof from "../../assets/icons/roof.png";
 import door from "../../assets/icons/door.png";
 import windowIcon from "../../assets/icons/window.png";
 import construction from "../../assets/icons/construction.png";
 import truck from "../../assets/icons/truck.png";
 import glue from "../../assets/icons/glue.png";
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { useState } from 'react';
 
 
 export function Main() {
-    const navigate = useNavigate();
-    const navegaC = () => {
-        navigate('/contact'); 
-    };
+    //const navigate = useNavigate();
+    //const navegaC = () => {
+    //    navigate('/contact'); 
+    //};
+    const [origen] = useState(() => {
+        if (typeof window === 'undefined' || typeof document === 'undefined') {
+            return 'Directo / Desconocido';
+        }
+        // 1. Primero intentamos leer el localStorage por si el usuario ya estuvo navegando
+        const origenGuardado = localStorage.getItem('origen_marketing');
+        if (origenGuardado) {
+            return origenGuardado;
+        }
+        // 2. Por las dudas, si entró DIRECTAMENTE a esta sección desde Instagram con el UTM, lo leemos de la URL
+        const params = new URLSearchParams(window.location.search);
+        const utmSource = params.get('utm_source');
+        if (utmSource) {
+            localStorage.setItem('origen_marketing', utmSource); // Lo guardamos para el futuro
+            console.log(utmSource);
+            return utmSource;
+        }   
+
+        return 'Directo / Desconocido';
+    });
     return (
         <div className="div_main">
+            <section className="main-contact">
+                <h1 className="title_main secondary-t">Schedule your free consultation</h1>
+                <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D3h00000679PE" method="POST" className="form-contact">
+                    <input type="hidden" name="oid" value="00D3h00000679PE" />
+                    <input type="hidden" name="retURL" value="https://fb-storm-x.vercel.app/" />
+                    <input type="hidden" id="lead_source" name="lead_source" value="Digital Marketing" />
+                    <input type="hidden" id="00N3h00000G85zg" name="00N3h00000G85zg" value={origen} />
+
+                    <div className="form-group">
+                        <label htmlFor="first_name">*First Name</label>
+                        <input  id="first_name" maxLength="40" name="first_name" size="20" type="text" required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="last_name">Last Name</label>
+                        <input  id="last_name" maxLength="80" name="last_name" size="20" type="text" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="phone">*Phone</label>
+                        <input  id="phone" maxLength="40" name="phone" size="20" type="text" required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">*Email</label>
+                        <input  id="email" maxLength="80" name="email" size="20" type="text" required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="zip">*Zip</label>
+                        <input  id="zip" maxLength="20" name="zip" size="20" type="text" />
+                    </div>
+                    <div className="form-group d-textarea">
+                        <label htmlFor="description">Service needed</label>
+                        <textarea id="description" name="description"></textarea>
+                    </div>
+                    <input type="submit" name="submit" className="submit-contact" value="Send"/>
+                </form>
+            </section>
             <section className="section1_main">
                 <h1 className="title_main main-t">Small Home Problems Become Expensive Repairs When Ignored.</h1>
                 <p className="subtitle_main">We help homeowners take care of the small maintenance tasks they've been putting off before they become costly problems.</p>
                 <p className="subtitle_main aux">Fix the small thing today.</p>
                 <div>
-                    <Boton contact={navegaC} iconPhone={false} title="Schedule a Free Evaluation"/>
-                    <div>
-                        <p className="p-contact">Call us today!</p>
-                        <Boton iconPhone={true} title=" (954) 980-1010"/>
-                    </div>
+                    <p className="p-contact">Call us today!</p>
+                    <button className="btn_schedule"><FontAwesomeIcon icon={faPhone}/> (305) 519-1550</button>
                 </div>
             </section>
             <section className="section2_main">

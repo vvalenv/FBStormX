@@ -11,7 +11,7 @@ section {
 /*SECCION 1*/
 
 .section1_main {
-  height: calc(100vh - 100px);
+  height: 90vh;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(to right, #ffffffc2, #ffffff17 140%), url('../assets/img_main.png');
