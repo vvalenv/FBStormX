@@ -18,7 +18,7 @@ export function Main() {
     //};
     const [origen] = useState(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') {
-            return 'Directo / Desconocido';
+            return 'None';
         }
         // 1. Primero intentamos leer el localStorage por si el usuario ya estuvo navegando
         const origenGuardado = localStorage.getItem('origen_marketing');
@@ -34,7 +34,7 @@ export function Main() {
             return utmSource;
         }   
 
-        return 'Directo / Desconocido';
+        return 'None';
     });
         const [copiado, setCopiado] = useState(false);
         const manejarCopia = async () => {
