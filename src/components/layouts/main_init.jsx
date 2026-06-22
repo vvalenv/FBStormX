@@ -8,6 +8,7 @@ import glue from "../../assets/icons/glue.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
+//import ReCAPTCHA from "react-google-recaptcha";
 
 
 export function Main() {
@@ -35,6 +36,22 @@ export function Main() {
 
         return 'Directo / Desconocido';
     });
+        const [copiado, setCopiado] = useState(false);
+        const manejarCopia = async () => {
+            try {
+            // Usamos la API nativa del navegador para copiar el texto
+            await navigator.clipboard.writeText("(305) 519-1550");
+            
+            // Cambiamos el estado para dar feedback visual al usuario
+            setCopiado(true);
+            
+            // Volvemos al estado inicial después de 2 segundos
+            setTimeout(() => setCopiado(false), 2000);
+            } catch (error) {
+            console.error("Error al copiar al portapapeles:", error);
+            alert("No se pudo copiar el texto automáticamente.");
+            }
+        };
     return (
         <div className="div_main">
             <section className="main-contact">
@@ -63,7 +80,7 @@ export function Main() {
                     </div>
                     <div className="form-group">
                         <label htmlFor="zip">*Zip</label>
-                        <input  id="zip" maxLength="20" name="zip" size="20" type="text" />
+                        <input  id="zip" maxLength="20" name="zip" size="20" type="text" required/>
                     </div>
                     <div className="form-group d-textarea">
                         <label htmlFor="description">Service needed</label>
@@ -78,7 +95,43 @@ export function Main() {
                 <p className="subtitle_main aux">Fix the small thing today.</p>
                 <div>
                     <p className="p-contact">Call us today!</p>
-                    <button className="btn_schedule"><FontAwesomeIcon icon={faPhone}/> (305) 519-1550</button>
+                    <button className="btn_schedule" onClick={manejarCopia}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</button>
+                    {copiado && (
+                        <div style={{
+                        position: 'fixed',
+                        top: '20px',
+                        right: '20px',
+                        backgroundColor: '#333',
+                        color: '#fff',
+                        padding: '12px 24px',
+                        borderRadius: '8px',
+                        boxShadow: '0px 4px 10px rgba(0,0,0,0.3)',
+                        zIndex: 1000,
+                        animation: 'fadeIn 0.3s ease-in-out',
+                        fontSize: '14px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '4px'
+                        }}>
+                        <strong style={{ color: '#4CAF50' }}>¡Copiado con éxito!</strong>
+                        <span style={{ 
+                            fontSize: '12px', 
+                            opacity: 0.8, 
+                            maxWidth: '200px', 
+                            whiteSpace: 'nowrap', 
+                            overflow: 'hidden', 
+                            textOverflow: 'ellipsis' 
+                        }}>
+                            (305) 519-1550
+                        </span>
+                        </div>
+                    )}
+                    <style>{`
+                        @keyframes fadeIn {
+                        from { opacity: 0; transform: translateY(-10px); }
+                        to { opacity: 1; transform: translateY(0); }
+                        }
+                    `}</style>
                 </div>
             </section>
             <section className="section2_main">

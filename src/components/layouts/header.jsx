@@ -9,9 +9,9 @@ export function NavBar() {
     const navegaI = () => {
         navigate('/'); 
     };
-    const navegaC = () => {
+    /*const navegaC = () => {
         navigate('/contact'); 
-    };
+    };*/
     const [isOpen,setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -24,7 +24,7 @@ export function NavBar() {
                     <li><a href="#" className="a_menu_links">Services</a></li>
                     <li><a href="#" className="a_menu_links">Why choose us</a></li>
                     <li><a href="#" className="a_menu_links">About us</a></li>
-                    <li><a onClick={navegaC} className="a_menu_links">Contact</a></li>
+                    <li><a href="#" className="a_menu_links">Contact</a></li>
                 </ul>
             </nav>
             <FontAwesomeIcon icon={ faBars } alt="menu" onClick={toggleMenu} className={`menu-bars ${isOpen ? 'is-active' : ''}`}/>
