@@ -54,41 +54,6 @@ export function Main() {
         };
     return (
         <div className="div_main">
-            <section className="main-contact">
-                <h1 className="title_main secondary-t">Schedule your free consultation</h1>
-                <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D3h00000679PE" method="POST" className="form-contact">
-                    <input type="hidden" name="oid" value="00D3h00000679PE" />
-                    <input type="hidden" name="retURL" value="https://fb-storm-x.vercel.app/" />
-                    <input type="hidden" id="lead_source" name="lead_source" value="Digital Marketing" />
-                    <input type="hidden" id="00N3h00000G85zg" name="00N3h00000G85zg" value={origen} />
-
-                    <div className="form-group">
-                        <label htmlFor="first_name">*First Name</label>
-                        <input  id="first_name" maxLength="40" name="first_name" size="20" type="text" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="last_name">Last Name</label>
-                        <input  id="last_name" maxLength="80" name="last_name" size="20" type="text" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="phone">*Phone</label>
-                        <input  id="phone" maxLength="40" name="phone" size="20" type="text" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">*Email</label>
-                        <input  id="email" maxLength="80" name="email" size="20" type="text" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="zip">*Zip</label>
-                        <input  id="zip" maxLength="20" name="zip" size="20" type="text" required/>
-                    </div>
-                    <div className="form-group d-textarea">
-                        <label htmlFor="description">Service needed</label>
-                        <textarea id="description" name="description"></textarea>
-                    </div>
-                    <input type="submit" name="submit" className="submit-contact" value="Send"/>
-                </form>
-            </section>
             <section className="section1_main">
                 <h1 className="title_main main-t">Small Home Problems Become Expensive Repairs When Ignored.</h1>
                 <p className="subtitle_main">We help homeowners take care of the small maintenance tasks they've been putting off before they become costly problems.</p>
@@ -135,16 +100,53 @@ export function Main() {
                 </div>
             </section>
             <section className="section2_main">
-                <h2 className="title_main secondary-t">Are Any of These Issues Familiar?</h2>
-                <ul>
-                    <li><p className="elem-p">Door that doesn't close properly</p></li>
-                    <li><p className="elem-p">Worn or cracked caulking</p></li>
-                    <li><p className="elem-p">Windows that need attention</p></li>
-                    <li><p className="elem-p">Small repairs you've been postponing</p></li>
-                    <li><p className="elem-p">Cluttered garage, patio or storage area</p></li>
-                    <li><p className="elem-p">Maintenance projects that never make it to the top of the list</p></li>
-                </ul>
-                <p className="p-subtext">Small issues don't stay small.</p>
+                <div>
+                    <h2 className="title_main secondary-t">Are Any of These Issues Familiar?</h2>
+                    <ul>
+                        <li><p className="elem-p">Door that doesn't close properly</p></li>
+                        <li><p className="elem-p">Worn or cracked caulking</p></li>
+                        <li><p className="elem-p">Windows that need attention</p></li>
+                        <li><p className="elem-p">Small repairs you've been postponing</p></li>
+                        <li><p className="elem-p">Cluttered garage, patio or storage area</p></li>
+                        <li><p className="elem-p">Maintenance projects that never make it to the top of the list</p></li>
+                    </ul>
+                    <p className="p-subtext">Small issues don't stay small.</p>
+                </div>
+                <div className="main-contact">
+                    <h1 className="title_main secondary-t">Schedule your free consultation</h1>
+                    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D3h00000679PE" method="POST" className="form-contact">
+                        <input type="hidden" name="oid" value="00D3h00000679PE" />
+                        <input type="hidden" name="retURL" value="https://fb-storm-x.vercel.app/" />
+                        <input type="hidden" id="lead_source" name="lead_source" value="Digital Marketing" />
+                        <input type="hidden" id="00N3h00000G85zg" name="00N3h00000G85zg" value={origen} />
+
+                        <div className="form-group">
+                            <label htmlFor="first_name">*First Name</label>
+                            <input  id="first_name" maxLength="40" name="first_name" size="20" type="text" required />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="last_name">Last Name</label>
+                            <input  id="last_name" maxLength="80" name="last_name" size="20" type="text" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phone">*Phone</label>
+                            <input  id="phone" maxLength="40" name="phone" size="20" type="text" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">*Email</label>
+                            <input  id="email" maxLength="80" name="email" size="20" type="text" />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="zip">*Zip</label>
+                            <input  id="zip" maxLength="20" name="zip" size="20" type="text" />
+                        </div>
+                        <div className="form-group d-textarea">
+                            <label htmlFor="description">Service needed</label>
+                            <textarea id="description" name="description"></textarea>
+                        </div>
+                        <input type="submit" name="submit" className="submit-contact" value="Send"/>
+                    </form>
+                </div>
             </section>
             <section className="section3_main">
                 <h2 className="title_main secondary-t">One visit. Multiple problems solved.</h2>

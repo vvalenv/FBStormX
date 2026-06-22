@@ -74,10 +74,12 @@ section {
 
 .section2_main {
   padding: 1em 0;
+  display: flex;
+  flex-direction: column;
   background-color: #FB4E02;
 }
 
-.section2_main h2,.section2_main ul li p, .section2_main .p-subtext {
+.section2_main div h2,.section2_main div ul li p, .section2_main div .p-subtext {
   color: #fbfafa;
 }
 
@@ -196,7 +198,16 @@ section {
 
     /*SECCION 2*/
 
-    .section2_main ul, .section5_main ul {
+    .section2_main {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .p-subtext {
+      margin-top: 22%;
+    }
+
+    .section2_main div ul, .section5_main ul {
         width: 550px;
         margin: auto;
     }
