@@ -57,7 +57,7 @@ export function Main() {
             <section className="section1_main">
                 <h1 className="title_main main-t">Small Home Problems Become Expensive Repairs When Ignored.</h1>
                 <p className="subtitle_main">We help homeowners take care of the small maintenance tasks they've been putting off before they become costly problems.</p>
-                <p className="subtitle_main aux">Fix the small thing today.</p>
+                <p className="subtitle_main aux">Fix the small things today.</p>
                 <div>
                     <p className="p-contact">Call us today!</p>
                     <button className="btn_schedule" onClick={manejarCopia}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</button>
