@@ -70,7 +70,7 @@
 @media screen and (min-width: 800px) {
 
     .header {
-    background-color: #fff;
+    background-color: #fbfafa;
   }
 
   .menu-bars {
@@ -84,7 +84,7 @@
     height: auto;          
     transform: translateX(0); 
     transition: none;
-    background-color: #fff;
+    background-color: #fbfafa;
   }
 
   .list_menu_links {
@@ -100,7 +100,7 @@
   }
 
   .a_menu_links:hover {
-    color: #fff;
+    color: #fbfafa;
   }
 
 }

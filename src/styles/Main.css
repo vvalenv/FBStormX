@@ -11,7 +11,7 @@ section {
 /*SECCION 1*/
 
 .section1_main {
-  height: 110vh;
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(to right, #ffffffc2, #ffffff17 140%), url('../assets/img_main.png');
@@ -27,7 +27,8 @@ section {
 }
 
 .title_main {
-  font-size: 2.3rem;
+  font-size: 2rem;
+  margin: 0.5em 0 0 0;
   color: #011337;
 }
 
@@ -41,6 +42,14 @@ section {
   font-size: 1.4rem;
   font-weight: 500;
   color: #011337;
+}
+
+.subtitle_main, .p-contact {
+  font-size: 1.2rem;
+}
+
+.p-contact {
+  margin: 0.5em 0;
 }
 
 #aux-p {
@@ -64,9 +73,12 @@ section {
 }
 
 .section2_main {
-  padding: 0;
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23fb4e02' fill-opacity='0.19'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  padding: 1em 0;
+  background-color: #FB4E02;
+}
+
+.section2_main h2,.section2_main ul li p, .section2_main .p-subtext {
+  color: #fbfafa;
 }
 
 .p-subtext {
@@ -78,7 +90,7 @@ section {
 /*SECCION 3*/
 
 .section3_main {
-  padding: 0;
+  padding: 1em 0 0 0;
 }
 
 .div-services {
@@ -106,21 +118,38 @@ section {
 
 /*SECCION 5*/
 
+.section5_main {
+  background-color: #011337;
+  padding: 1em;
+}
+
+.section5_main h3, .section5_main ul li p {
+  color: #fbfafa;
+}
+
 .subtitle-sec5 {
-  font-size: 1.4rem;
+  margin-top: 2em;
+  font-size: 1.3rem;
   font-weight: 500;
-  color: #011337;
+}
+
+.div-p-sec5 {
+  color: #fbfafa;
 }
 
 .p-sec5 {
-  font-size: 1.3rem;
-  color: #011337;
+  font-size: 1.2rem;
 }
 
 /*SECCION 6*/
 
 .section6_main {
-  margin-bottom: 20px;
+  padding: 1em;
+}
+
+.d-sec6 {
+  color: #011337;
+  margin-top: 2em;
 }
 
 @media screen and (min-width: 800px) {
@@ -128,75 +157,80 @@ section {
     .section1_main {
         background-image: linear-gradient(to right, #ffffffef, #ffffff00 100%), url('../assets/img_main.png');
         background-position: center;
-        height: 80vh;
     }
 
-  .section1_main div {
-    display: flex;
-    flex-direction: row;
-    gap: 2em; 
-  }
+    .section1_main div {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .title-main {
-    font-size: 2.6rem;
-  }
+    .main-t {
+        max-width: 800px;
+        font-size: 2.8rem;
+        word-break: break-word;
+    }
 
-  .main-t {
-    max-width: 600px;
-    word-break: break-word;
-  }
+    .title_main {
+      font-size: 2.5rem;
+    }
 
-  .subtitle_main {
-    max-width: 600px;
-  }
+    .subtitle_main {
+        max-width: 700px;
+        font-size: 1.6rem;
+        margin: 0 0 0.5em 0;
+    }
 
-  .elem-p {
-    font-size: 1.3rem;
-    text-align: start;
-  }
+    .p-contact {
+        font-size: 1.6rem;
+    }
 
-  .elem-p-service {
-    font-size: 1.3rem;
-    text-align: center;
-  }
+    .elem-p {
+        font-size: 1.3rem;
+        text-align: start;
+    }
 
-  /*SECCION 2*/
+    .elem-p-service {
+        font-size: 1.3rem;
+        text-align: center;
+    }
 
-  .section2_main ul, .section5_main ul {
-    width: 550px;
-    margin: auto;
-  }
+    /*SECCION 2*/
 
-  /*SECTION 3*/
+    .section2_main ul, .section5_main ul {
+        width: 550px;
+        margin: auto;
+    }
 
-  .div-services {
-    flex-direction: row;
-    width: 100%;
-    margin: 3em 0 1em 0;
-  }
+    /*SECTION 3*/
 
-  .elem-service {
-    flex-direction: column;
-    gap: 0;
-  }
+    .div-services {
+        flex-direction: row;
+        width: 100%;
+        margin: 3em 0 1em 0;
+    }
 
-  /*SECCION 5*/
+    .elem-service {
+        flex-direction: column;
+        gap: 0;
+    }
 
-  .div-p-sec5 {
-    width: 550px;
-    margin: auto;
-  }
+    /*SECCION 5*/
 
-  /*SECCION 6*/
+    .div-p-sec5 {
+        width: 550px;
+        margin: auto;
+    }
 
-  #last-title {
-    width: 70%;
-    margin: 1em auto;
-  }
+    /*SECCION 6*/
 
-  .d-sec6 {
-    width: 70%;
-    margin: auto;
-  }
+    #last-title {
+        width: 70%;
+        margin: 0.5em auto 1em auto;
+    }
+
+    .d-sec6 {
+        width: 70%;
+        margin: auto;
+    }
 
 }

@@ -87,9 +87,9 @@ export function Main() {
             <section className="section6_main">
                 <h4 className="title_main secondary-t" id="last-title"> Let's Take Care of Those Small Problems Before They Become Bigger Ones</h4>
                 <div className="d-sec6">
-                    <p className="subtitle_main">Don't wait until it becomes expensive.</p>
+                    <p className="p-sec5">Don't wait until it becomes expensive.</p>
                     <p className="p-sec5">That small issue you are ignoring? We fix it in hours, not weeks.</p>
-                    <p className="p-subtext">What you avoid today becomes tomorrow's cost.</p>
+                    <p className="p-sec5">What you avoid today becomes tomorrow's cost.</p>
                 </div>
             </section>
         </div>

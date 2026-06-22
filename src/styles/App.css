@@ -5,7 +5,7 @@
 
 .body_init {
   display: grid;
-  background-color: #fff;
+  background-color: #fbfafa;
   font-family: Barlow;
 }
 
@@ -22,13 +22,13 @@ h1,h2,h3,h4 {
 
 .btn_schedule {
   display: inline-block;
-  padding: .75rem 1.25rem;
+  padding: .75rem;
   border-radius: 5px;
   word-break: break-word;
   width: 12em;
   border: 0;
   color: #011337;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: .10rem;
   transition: all .3s;
   position: relative;
@@ -85,6 +85,10 @@ h1,h2,h3,h4 {
     min-height: 60vh;
   }
 
+  .main-contact h1 {
+    margin: 0.5em 0;
+  }
+
   .form-contact {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -138,6 +142,12 @@ h1,h2,h3,h4 {
 /*MEDIA QUERYS*/
 
 @media screen and (min-width: 800px) {
+
+  /*BOTON*/
+
+  .btn_schedule {
+    font-size: 1.4rem;
+  }
 
   /*CONTACT*/
 

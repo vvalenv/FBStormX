@@ -24,7 +24,6 @@ export function NavBar() {
                     <li><a href="#" className="a_menu_links">Services</a></li>
                     <li><a href="#" className="a_menu_links">Why choose us</a></li>
                     <li><a href="#" className="a_menu_links">About us</a></li>
-                    <li><a href="#" className="a_menu_links">Reviews</a></li>
                     <li><a onClick={navegaC} className="a_menu_links">Contact</a></li>
                 </ul>
             </nav>
