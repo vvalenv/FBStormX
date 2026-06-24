@@ -8,10 +8,10 @@ export function Footer() {
     return (
         <footer className='footer'>
             <div className="d-footer-info">
-                <p className='p-footer'><FontAwesomeIcon icon={faLocationDot} style={{color: "#fbfafa",}} /> Proudly serving south florida</p>
+                <p className='p-footer'><FontAwesomeIcon icon={faLocationDot} style={{color: "#fbfafa",}} /> Proudly serving South Florida</p>
                 <p className="p-footer"><FontAwesomeIcon icon={faClock} style={{color: "#fbfafa",}}/> On-time services</p>
                 <p className="p-footer"><FontAwesomeIcon icon={faCircleCheck} style={{color: "#fbfafa",}} /> Satisfaction guaranteed</p>
-                <p className="p-footer"><FontAwesomeIcon icon={faShieldHalved} style={{color: "#fbfafa",}} /> Licensed and injured</p>
+                <p className="p-footer"><FontAwesomeIcon icon={faShieldHalved} style={{color: "#fbfafa",}} /> Licensed and insured</p>
             </div>
             <div className='d-social'>
                 <FontAwesomeIcon onClick={irIg} icon={faInstagram} style={{color: "#fbfafa",}} className='i-social' />

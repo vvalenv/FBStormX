@@ -59,7 +59,7 @@ export function Main() {
                 <p className="subtitle_main">We help homeowners take care of the small maintenance tasks they've been putting off before they become costly problems.</p>
                 <p className="subtitle_main aux">Fix the small things today.</p>
                 <div>
-                    <p className="p-contact">Call us today!</p>
+                    <p className="p-contact">Call us now!</p>
                     <button className="btn_schedule" onClick={manejarCopia}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</button>
                     {copiado && (
                         <div style={{
@@ -116,7 +116,7 @@ export function Main() {
                     <h1 className="title_main secondary-t">Schedule your free consultation</h1>
                     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D3h00000679PE" method="POST" className="form-contact">
                         <input type="hidden" name="oid" value="00D3h00000679PE" />
-                        <input type="hidden" name="retURL" value="https://fb-storm-x.vercel.app/" />
+                        <input type="hidden" name="retURL" value="fbstormx.com" />
                         <input type="hidden" id="lead_source" name="lead_source" value="Digital Marketing" />
                         <input type="hidden" id="00N3h00000G85zg" name="00N3h00000G85zg" value={origen} />
 
@@ -150,7 +150,7 @@ export function Main() {
             </section>
             <section className="section3_main">
                 <h2 className="title_main secondary-t">One visit. Multiple problems solved.</h2>
-                <p className="subtitle_main" id="aux-p">Instead of calling 5 contractors, we handle everything in one visit.</p>
+                <p className="subtitle_main" id="aux-p">Instead of calling 6 contractors, we handle everything in one visit.</p>
                 <div className="div-services">
                     <div className="elem-service">
                         <img src={roof} alt="roof" className="elem-img"/>
@@ -194,7 +194,7 @@ export function Main() {
                 </div>
             </section>
             <section className="section6_main">
-                <h4 className="title_main secondary-t" id="last-title"> Let's Take Care of Those Small Problems Before They Become Bigger Ones</h4>
+                <h4 className="title_main secondary-t" id="last-title"> Let's Take Care of Those Small Problems Before, They Become Bigger Ones</h4>
                 <div className="d-sec6">
                     <p className="p-sec5">Don't wait until it becomes expensive.</p>
                     <p className="p-sec5">That small issue you are ignoring? We fix it in hours, not weeks.</p>
