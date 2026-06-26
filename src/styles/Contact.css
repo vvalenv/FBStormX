@@ -1,0 +1,5 @@
+.d-main-c {
+    height: calc(100vh - 200px);
+    padding: 1em 0 0 1em;
+    color: #FB4E02;
+}

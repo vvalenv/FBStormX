@@ -43,7 +43,7 @@ export function Main() {
             <section className="section1_main">
                 <div>
                     <h1 className="title_main main-t">Small Home Problems Become Expensive Repairs When Ignored.</h1>
-                    <p className="subtitle_main">We assist homeowners take care of the small maintenance tasks they've been putting off before they become costly problems.</p>
+                    <p className="subtitle_main">We assist homeowners take care of the small maintenance tasks they've been putting off before they become expensive problems.</p>
                     <p className="subtitle_main aux">Fix the small things today.</p>
                     <p className="p-contact">Call us now!</p>
                     <button className="btn_schedule"><a href={`tel:${numeroTelefono}`}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</a></button>
@@ -78,7 +78,7 @@ export function Main() {
                                 <input  id="zip" maxLength="20" name="zip" size="20" type="text" />
                             </div>
                             <div className="form-group d-textarea">
-                                <label htmlFor="description">Service needed</label>
+                                <label htmlFor="description">Service request</label>
                                 <textarea id="description" name="description"></textarea>
                             </div>
                             <input type="submit" name="submit" className="submit-contact" value="Send"/>
