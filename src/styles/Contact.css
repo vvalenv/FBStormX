@@ -1,5 +1,6 @@
 .d-main-c {
     height: calc(100vh - 200px);
     padding: 1em 0 0 1em;
-    color: #FB4E02;
+    color: #fbfafa;
+     background-image: linear-gradient(to right, #FB4E02, #e14300 100%);
 }

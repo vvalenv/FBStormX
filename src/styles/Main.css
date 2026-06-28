@@ -156,6 +156,10 @@ section {
   padding: 1em;
 }
 
+#last-title span {
+  display: block;
+}
+
 .d-sec6 {
   color: #011337;
   margin-top: 2em;
@@ -243,6 +247,7 @@ section {
     align-items: center;
     justify-content: center;
     width: 70%;
+    max-width: 800px;
     margin: 3em auto 1em auto;
     row-gap: 3em;
   }

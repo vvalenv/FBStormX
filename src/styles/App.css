@@ -24,6 +24,7 @@ h1,h2,h3,h4 {
   height: 200px;
   width: 150px;
   border-radius: 15px;
+  margin: auto;
   display: grid;
   grid-template-rows: 170px auto;
 }
@@ -95,18 +96,16 @@ h1,h2,h3,h4 {
     z-index: -1;
 }
 
-.btn_schedule:hover {
-  .btn_schedule a {
-    color: #fbfafa;
-  }
-  .icon-phone {
-    color: #fbfafa;
-  }
-}
-
 .icon-phone {
   color: #011337;
+}
+
+.btn_schedule a {
   transition: all .3s;
+}
+
+.btn_schedule:hover a {
+  color: #fbfafa;
 }
 
 .btn_schedule:hover:before {
@@ -189,12 +188,11 @@ h1,h2,h3,h4 {
   /*CARDS*/
 
   .card-s {
-    margin: auto;
-    width: 200px;
+    width: 250px;
   }
 
   .card-p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   /*CONTACT*/

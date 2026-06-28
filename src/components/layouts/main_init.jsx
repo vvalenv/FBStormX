@@ -149,7 +149,7 @@ export function Main() {
                 
             </section>
             <section className="section6_main">
-                <h4 className="title_main secondary-t" id="last-title"> Let's Take Care of Those Small Problems Before, They Become Bigger Ones</h4>
+                <h4 className="title_main secondary-t" id="last-title"> Let's Take Care of Those Small Problems Before,<span> They Become Bigger Ones</span></h4>
                 <div className="d-sec6">
                     <p className="p-sec5">Don't wait until it becomes expensive.</p>
                     <p className="p-sec5">That small issue you are ignoring? We fix it in hours, not weeks.</p>
