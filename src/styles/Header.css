@@ -58,8 +58,18 @@
   cursor: pointer;
 }
 
+.i-social {
+  color: #FB4E02;
+  transition: all 0.3s;
+  font-size: 1.6rem;
+}
+
 .a_menu_links:hover {
   background-color: #FB4E02;
+  color: #011337;
+}
+
+.a_menu_links:hover .i-social {
   color: #011337;
 }
 
@@ -99,7 +109,7 @@
     padding: 2em 0.5em 2em 0.5em;
   }
 
-  .a_menu_links:hover {
+  .a_menu_links:hover, .a_menu_links:hover .i-social {
     color: #fbfafa;
   }
 

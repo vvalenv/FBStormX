@@ -1,10 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faShieldHalved} from '@fortawesome/free-solid-svg-icons';
 import { faClock, faCircleCheck } from '@fortawesome/free-regular-svg-icons';
-// import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 export function Footer() {
-    //const irIg = () => window.location.href = "https://www.instagram.com/fbstormx/";
-    //const irFb = () => window.location.href = "https://www.facebook.com/profile.php?id=61589730987278";
     return (
         <footer className='footer'>
             <div className="d-elem-footer">
