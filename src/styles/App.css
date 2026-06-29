@@ -5,6 +5,7 @@
 
 .body_init {
   display: grid;
+  grid-template-rows: [fila-1] 101px [fila-2] auto [fila-3] 132px [fila-4];
   background-color: #fbfafa;
   font-family: Barlow;
 }
@@ -27,6 +28,7 @@ h1,h2,h3,h4 {
   margin: auto;
   display: grid;
   grid-template-rows: 170px auto;
+  cursor: pointer;
 }
 
 .card-img {

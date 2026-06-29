@@ -1,6 +1,7 @@
 .d-main-c {
-    height: calc(100vh - 200px);
+    height: 100vh;
     padding: 1em 0 0 1em;
     color: #fbfafa;
-     background-image: linear-gradient(to right, #FB4E02, #e14300 100%);
+    background-image: linear-gradient(to right, #FB4E02, #e14300 100%);
+    overflow: hidden;
 }

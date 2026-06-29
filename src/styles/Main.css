@@ -8,6 +8,25 @@ section {
   padding: 0 1em 0 1em;
 }
 
+/*Whatsapp*/
+
+.iconW-d {
+  background-color: #34de05;
+  padding: 1em;
+  border-radius: 5em;
+  position: fixed;
+  bottom: 10%;
+  right: 2em;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.iconW {
+  height: 32px;
+  width: 32px;
+  color: #fbfafa;
+}
+
 /*SECCION 1*/
 
 .section1_main {
@@ -21,6 +40,10 @@ section {
 
 .section1_main h1, .section1_main p {
   color: #fbfafa;
+}
+
+.section1_main h1 span {
+  display: block;
 }
 
 .p-contact {

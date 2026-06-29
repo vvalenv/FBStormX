@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 import Card from "./UXcomponents";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 //import ReCAPTCHA from "react-google-recaptcha";
 
 
@@ -42,8 +43,9 @@ export function Main() {
         <div className="div_main">
             <section className="section1_main">
                 <div>
-                    <h1 className="title_main main-t">Small Home Problems Become Expensive Repairs When Ignored.</h1>
-                    <p className="subtitle_main">We assist homeowners take care of the small maintenance tasks they've been putting off before they become expensive problems.</p>
+                    <h1 className="title_main main-t">Small Home Problems Become <span>Expensive Repairs When Ignored.</span></h1>
+                    <p className="subtitle_main">We assist homeowners with the small home repair tasks
+                        they&#39;ve been putting off before they become expensive problems.</p>
                     <p className="subtitle_main aux">Fix the small things today.</p>
                     <p className="p-contact">Call us now!</p>
                     <button className="btn_schedule"><a href={`tel:${numeroTelefono}`}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</a></button>
@@ -85,6 +87,9 @@ export function Main() {
                         </form>
                     </div>
                 </div>
+                <div className="iconW-d">
+                    <a href="https://wa.me/13055191550"><FontAwesomeIcon icon={faWhatsapp} className="iconW"/></a>
+                </div>
             </section>
             <section className="section4_main">
                 <h2 className="title_main secondary-t">ALL YOUR MINOR HOME REPAIRS, SOLVED IN ONE PLACE</h2>
@@ -101,11 +106,11 @@ export function Main() {
                 <h2 className="title_main secondary-t">Are Any of These Issues Familiar?</h2>
                 <ul>
                     <li><p className="elem-p">Door that doesn't close properly</p></li>
-                    <li><p className="elem-p">Worn or cracked caulking</p></li>
                     <li><p className="elem-p">Windows that need attention</p></li>
-                    <li><p className="elem-p">Small repairs you've been postponing</p></li>
+                    <li><p className="elem-p">Worn or cracked caulking</p></li>
+                    <li><p className="elem-p">Roof repairs that can&#39;t wait until the next storm</p></li>
                     <li><p className="elem-p">Cluttered garage, patio or storage area</p></li>
-                    <li><p className="elem-p">Maintenance projects that never make it to the top of the list</p></li>
+                    <li><p className="elem-p">Home repair projects that never make it to the top of your list</p></li>
                 </ul>
             </section>
             <section className="section3_main">
