@@ -15,14 +15,14 @@
     padding: 0 0.6em;
 }
 
-.div-services {
+.div-servicess {
     display: grid;
     gap: 2em;
 }
 
 @media screen and (min-width: 800px) {
     
-    .div-services {
+    .div-servicess {
         grid-template-columns: repeat(2, 1fr);
         width: calc(100% - 4em);
         margin: 2em;

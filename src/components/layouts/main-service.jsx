@@ -5,7 +5,7 @@ export function MainS() {
         <main className="main-s">
             <h2 className="title_main secondary-t">Affordable solutions <span>for your home</span></h2>
             <p className="subtitle_service">One call. Our trusted team. We handle the small tasks that make a big difference.</p>
-            <div className="div-services">
+            <div className="div-servicess">
                 <CardService nombre="Roof services" img="roof.png" desc="Fix leaks,
                     replace damaged shingles and keep your roof in top shape." /> 
                 <CardService nombre="Door services" img="door2.jpg" desc="Doors that stick,
