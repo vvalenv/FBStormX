@@ -23,7 +23,7 @@
 .header {
   position: relative;
   display: flex;
-  background-color: #011337;
+  background-color: #fbfafa;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@
 
 .navbar {
   position: absolute;
-  background-color: #011337;
+  background-color: #fbfafa;
   width: 80%;
   top: 100%;
   left: 0;
@@ -66,11 +66,11 @@
 
 .a_menu_links:hover {
   background-color: #FB4E02;
-  color: #011337;
+  color: #fbfafa;
 }
 
 .a_menu_links:hover .i-social {
-  color: #011337;
+  color: #fbfafa;
 }
 
 .menu-open {
@@ -78,10 +78,6 @@
 }
 
 @media screen and (min-width: 800px) {
-
-    .header {
-    background-color: #fbfafa;
-  }
 
   .menu-bars {
     display: none;

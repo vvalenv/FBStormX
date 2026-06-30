@@ -43,9 +43,9 @@ export function Main() {
         <div className="div_main">
             <section className="section1_main">
                 <div>
-                    <h1 className="title_main main-t">Small Home Problems Become <span>Expensive Repairs When Ignored.</span></h1>
-                    <p className="subtitle_main">We assist homeowners with the small home repair tasks
-                        they&#39;ve been putting off before they become expensive problems.</p>
+                    <h1 className="title_main main-t">Small Home Problems Become Expensive Repairs <span> When Ignored.</span></h1>
+                    <p className="subtitle_main">We assist homeowners with<span> the small home repair tasks </span>
+                        they&#39;ve been putting off before<span> they become expensive problems.</span></p>
                     <p className="subtitle_main aux">Fix the small things today.</p>
                     <p className="p-contact">Call us now!</p>
                     <button className="btn_schedule"><a href={`tel:${numeroTelefono}`}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</a></button>
@@ -92,14 +92,14 @@ export function Main() {
                 </div>
             </section>
             <section className="section4_main">
-                <h2 className="title_main secondary-t">ALL YOUR MINOR HOME REPAIRS, SOLVED IN ONE PLACE</h2>
+                <h2 className="title_main secondary-t">All you minor home repairs, solved in one place</h2>
                 <div className="div-cards">
-                    <Card nombre="Roof services" img="door1.jpg"/>
-                    <Card nombre="Door services" img="roof.png"/>
+                    <Card nombre="Roof services" img="roof.png"/>
+                    <Card nombre="Door services" img="door2.jpg"/>
                     <Card nombre="Window services" img="window.png"/>
                     <Card nombre="Caulking services" img="caulking.png"/>
                     <Card nombre="Junk removal" img="junk.png"/>
-                    <Card nombre="Decorative doors" img="door2.jpg"/>
+                    <Card nombre="Decorative doors" img="door1.jpg"/>
                 </div>
             </section>
             <section className="section2_main">
