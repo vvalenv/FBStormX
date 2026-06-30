@@ -3,7 +3,7 @@ import { CardService } from "./UXcomponents";
 export function MainS() {
     return (
         <main className="main-s">
-            <h2 className="title_main secondary-t">Affordable solutions <span>for your home</span></h2>
+            <h2 className="title_main secondary-t">One Visit. Multiple Repairs. Problem Solved.</h2>
             <p className="subtitle_service">One call. Our trusted team. We handle the small tasks that make a big difference.</p>
             <div className="div-servicess">
                 <CardService nombre="Roof services" img="roof.png" desc="Fix leaks,

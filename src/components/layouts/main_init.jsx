@@ -56,6 +56,8 @@ export function Main() {
                         <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D3h00000679PE" method="POST" className="form-contact">
                             <input type="hidden" name="oid" value="00D3h00000679PE" />
                             <input type="hidden" name="retURL" value="fbstormx.com" />
+                            <input type="hidden" name="00NPj000005ezLF" value="WebForm" />
+                            <input type="hidden" name="assignmentRuleId" value="01QXXXXXXXXXXXXXXX" />
                             <input type="hidden" id="lead_source" name="lead_source" value="Digital Marketing" />
                             <input type="hidden" id="00N3h00000G85zg" name="00N3h00000G85zg" value={origen} />
 
