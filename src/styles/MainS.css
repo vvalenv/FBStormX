@@ -8,11 +8,20 @@
 }
 
 .subtitle_service {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
     color: #fbfafa;
     padding: 0 0.6em;
+}
+
+.subtitle2_service {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    color: #fbfafa;
+    padding: 0 0.6em;
+    margin-bottom: 2em;
 }
 
 .div-servicess {
@@ -22,11 +31,21 @@
 }
 
 @media screen and (min-width: 800px) {
+
+    .subtitle_service {
+        font-size: 1.8rem;
+    }
+
+    .subtitle2_service {
+        max-width: 750px;
+        font-size: 1.4rem;
+        margin: auto;
+    }
     
     .div-servicess {
-        grid-template-columns: repeat(2, 1fr);
-        width: calc(100% - 4em);
-        margin: 2em;
+        grid-template-columns: repeat(3, 1fr);
+        width: calc(100% - 6em);
+        margin: 3em;
     }
 
 }

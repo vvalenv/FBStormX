@@ -4,7 +4,7 @@ import windowIcon from "../../assets/icons/window.png";
 import construction from "../../assets/icons/construction.png";
 import truck from "../../assets/icons/truck.png";
 import glue from "../../assets/icons/glue.png";
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
@@ -14,10 +14,10 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 
 export function Main() {
-    //const navigate = useNavigate();
-    //const navegaC = () => {
-    //    navigate('/contact'); 
-    //};
+    const navigate = useNavigate();
+    const navegaS = () => {
+        navigate('/services'); 
+    };
     const numeroTelefono = "3055191550";
     const [origen] = useState(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') {
@@ -96,12 +96,12 @@ export function Main() {
             <section className="section4_main">
                 <h2 className="title_main secondary-t">All you minor home repairs, solved in one place</h2>
                 <div className="div-cards">
-                    <Card nombre="Roof services" img="roof.png"/>
-                    <Card nombre="Door services" img="door2.jpg"/>
-                    <Card nombre="Window services" img="window.png"/>
-                    <Card nombre="Caulking services" img="caulking.png"/>
-                    <Card nombre="Junk removal" img="junk.png"/>
-                    <Card nombre="Decorative doors" img="door1.jpg"/>
+                    <Card nombre="Roof services" img="roof.png" ir={navegaS}/>
+                    <Card nombre="Door services" img="door2.jpg" ir={navegaS}/>
+                    <Card nombre="Window services" img="window.png" ir={navegaS}/>
+                    <Card nombre="Caulking services" img="caulking.png" ir={navegaS}/>
+                    <Card nombre="Junk removal" img="junk.png" ir={navegaS}/>
+                    <Card nombre="Decorative doors" img="door1.jpg" ir={navegaS}/>
                 </div>
             </section>
             <section className="section2_main">

@@ -26,33 +26,64 @@ h1,h2,h3,h4 {
   margin: 0.5em 0 0.5em 0;
 }
 
+/*ANIMACIONES*/
+
+/* Estado base para todos los elementos a animar */
+.animar-base {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform; /* Optimización de rendimiento */
+}
+
+/* Cuando entra en pantalla, se vuelve visible y va a su posición original */
+.animar-base.mostrar {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* --- Diferentes Efectos --- */
+
+/* 1. Desde abajo (Por defecto) */
+.fade-up {
+  transform: translateY(50px);
+}
+
+.fade-left {
+  transform: translateX(-40px);
+}
+
+.fade-right {
+  transform: translateX(40px);
+}
+
+.zoom-in {
+  transform: scale(0.8);
+}
+
 /*SERVICE*/
 
 .div-service {
   display: flex;
-  flex-direction: row;
-  gap: 0.5em;
+  flex-direction: column;
+  gap: 0.6em;
   align-items: center;
-}
-
-.div-service:nth-child(2n) {
-  flex-direction: row-reverse;
 }
 
 .service-img {
   width: 180px;
-  height: 140px;
+  height: 170px;
+  object-fit: cover;
 }
 
 .service-name {
   font-size: 1.4rem;
-  margin: 0.2em 0;
   font-weight: 500;
+  text-align: center;
 }
 
 .service-desc {
   font-size: 1.1rem;
-  margin: 0.5em 0;
+  text-align: center;
 }
 
 /*CARD*/
@@ -236,18 +267,33 @@ h1,h2,h3,h4 {
 
   .div-service {
     gap: 1em;
+    flex-direction: row;
   }
 
-  .div-service:nth-child(2n) {
-    flex-direction: row;
+  .service-col {
+    grid-column: span 2;
+  }
+
+  .service-col:nth-child(2n) {
+    grid-column: 2 / span 2;
+  }
+
+  .service-col:nth-child(2n) .div-service {
+    flex-direction: row-reverse;
+  }
+
+  .service-col:nth-child(2n) .div-service .service-name {
+    text-align: end;
   }
 
   .service-name {
     font-size: 1.6rem;
+    text-align: start;
   }
 
   .service-desc {
     font-size: 1.3rem;
+    text-align: start;
   }
 
   .service-img {
