@@ -14,7 +14,7 @@ export function MainS() {
                     prevent future water intrusion." />
                 </ScrollAnimate>
                 <ScrollAnimate className="service-col" animationClass="fade-right">
-                    <CardService nombre="Door Repair Services" img="door2.jpg" desc="Restore the function and appearance of your doors. 
+                    <CardService nombre="Door Repair Services" img="door.png" desc="Restore the function and appearance of your doors. 
                     Whether they're sticking, misaligned, difficult to close, or showing signs of wear, 
                     we make the necessary adjustments for smooth, reliable operation." />
                 </ScrollAnimate>

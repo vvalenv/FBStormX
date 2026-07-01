@@ -99,12 +99,12 @@ export function Main() {
             <section className="section4_main">
                 <h2 className="title_main secondary-t">All you minor home repairs, solved in one place</h2>
                 <div className="div-cards">
-                    <Card nombre="Roof services" img="roof.png" ir={navegaS}/>
-                    <Card nombre="Door services" img="door2.jpg" ir={navegaS}/>
-                    <Card nombre="Window services" img="window.png" ir={navegaS}/>
-                    <Card nombre="Caulking services" img="caulking.png" ir={navegaS}/>
-                    <Card nombre="Junk removal" img="junk.png" ir={navegaS}/>
-                    <Card nombre="Decorative doors" img="door1.jpg" ir={navegaS}/>
+                    <Card nombre="Minor Roof Repairs" img="roof.png" ir={navegaS}/>
+                    <Card nombre="Door Repair Services" img="door.png" ir={navegaS}/>
+                    <Card nombre="Window Repair Services" img="window.png" ir={navegaS}/>
+                    <Card nombre="Caulking Services" img="caulking.png" ir={navegaS}/>
+                    <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir={navegaS}/>
+                    <Card nombre="Decorative Glass Doors" img="door1.jpg" ir={navegaS}/>
                 </div>
             </section>
             <section className="section2_main">

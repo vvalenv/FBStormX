@@ -90,8 +90,8 @@ h1,h2,h3,h4 {
 /*CARD*/
 
 .card-s {
-  height: 200px;
-  width: 180px;
+  height: 180px;
+  width: 140px;
   border-radius: 15px;
   margin: auto;
   display: grid;
@@ -115,6 +115,7 @@ h1,h2,h3,h4 {
   background-color: #011337;
   text-align: center;
   font-weight: 500;
+  font-size: 0.7rem;
   color: #fbfafa;
   padding: 0.5em 0;
   margin: 0;
@@ -258,6 +259,18 @@ h1,h2,h3,h4 {
 
 /*MEDIA QUERYS*/
 
+@media screen and (min-width: 400px) {
+
+  .card-s {
+    width: 180px;
+  }
+
+  .card-p {
+    font-size: 0.9rem;
+  }
+
+}
+
 @media screen and (min-width: 800px) {
 
   span {
@@ -274,10 +287,16 @@ h1,h2,h3,h4 {
 
   .card-s {
     width: 250px;
+    height: 200px;
   }
 
   .card-p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  .card-img {
+    height: 100%;
+    width: 100%;
   }
 
   /*CONTACT*/
@@ -330,6 +349,10 @@ h1,h2,h3,h4 {
     text-align: end;
   }
 
+  .service-col:nth-child(2n) .service-img {
+    border-radius: 0 15px 15px 0;
+  }
+
   .div-service div {
     display: flex;
     flex-direction: column;
@@ -349,7 +372,8 @@ h1,h2,h3,h4 {
   }
 
   .service-img {
-    width: 240px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
+    border-radius: 15px 0 0 15px;
   }
 }
