@@ -16,6 +16,9 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 export function Main() {
     const navigate = useNavigate();
     const navegaS = () => {
+        window.scrollTo({
+            top:0
+        });
         navigate('/services'); 
     };
     const numeroTelefono = "3055191550";
