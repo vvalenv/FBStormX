@@ -263,44 +263,6 @@ h1,h2,h3,h4 {
     display: inline;
   }
 
-  /*SERVICES*/
-
-  .div-service {
-    gap: 1em;
-    flex-direction: row;
-  }
-
-  .service-col {
-    grid-column: span 2;
-  }
-
-  .service-col:nth-child(2n) {
-    grid-column: 2 / span 2;
-  }
-
-  .service-col:nth-child(2n) .div-service {
-    flex-direction: row-reverse;
-  }
-
-  .service-col:nth-child(2n) .div-service .service-name {
-    text-align: end;
-  }
-
-  .service-name {
-    font-size: 1.6rem;
-    text-align: start;
-  }
-
-  .service-desc {
-    font-size: 1.3rem;
-    text-align: start;
-  }
-
-  .service-img {
-    width: 200px;
-    height: 170px;
-  }
-
   /*BOTON*/
 
   .btn_schedule {
@@ -341,4 +303,52 @@ h1,h2,h3,h4 {
     grid-column: span 4;
   }
  
+}
+
+@media screen and (min-width: 950px) {
+  /*SERVICES*/
+
+  .div-service {
+    gap: 1em;
+    flex-direction: row;
+  }
+
+  .service-col {
+    grid-column: span 2;
+  }
+
+  .service-col:nth-child(2n) {
+    grid-column: 2 / span 2;
+  }
+
+  .service-col:nth-child(2n) .div-service {
+    flex-direction: row-reverse;
+  }
+
+  .service-col:nth-child(2n) .div-service .service-name {
+    text-align: end;
+  }
+
+  .div-service div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+  }
+
+  .service-name {
+    font-size: 1.6rem;
+    text-align: start;
+    margin: 0;
+  }
+
+  .service-desc {
+    font-size: 1.3rem;
+    text-align: start;
+  }
+
+  .service-img {
+    width: 240px;
+    height: 200px;
+  }
 }
