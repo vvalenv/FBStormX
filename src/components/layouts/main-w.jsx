@@ -2,9 +2,9 @@ export function ChooseUs() {
     return(
         <main className="main-w">
             <h1>Why choose FB StormX</h1>
-            <h2>Your home deserves dependable service from experienced professionals you can trust. At FB StormX, we&#39;re
+            <p className="subtitle_service">Your home deserves dependable service from experienced professionals you can trust. At FB StormX, we&#39;re
             committed to delivering quality workmanship, honest recommendations, and affordable solutions—all with
-            the convenience of completing multiple projects in one visit.</h2>
+            the convenience of completing multiple projects in one visit.</p>
             <ul>
                 <li>Experience You Can Trust</li>
                 <p>Led by a professional with more than 18 years of hands-on experience, FB StormX delivers quality

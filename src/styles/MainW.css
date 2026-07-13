@@ -4,12 +4,8 @@
     color: #fbfafa;
 }
 
-.main-w h1, .main-w h2 {
+.main-w h1 {
     text-align: center;
-}
-
-.main-w h2 {
-    font-size: 1.4rem;
 }
 
 .main-w ul {
@@ -34,12 +30,17 @@
 }
 
 @media  screen and (min-width: 800px) {
+
+    .main-w h1 {
+        font-size: 2.4rem;
+    }
+
     .main-w ul {
         max-width: 750px;
         margin: auto;
     }
 
-    .main-w h2 {
+    .main-w p {
         max-width: 750px;
         font-size: 1.5rem;
         margin: 1em auto 3em auto;
