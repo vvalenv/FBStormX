@@ -15,6 +15,9 @@ export function NavBar() {
     const navegaS = () => {
         navigate('/services');
     }
+    const navegaW = () => {
+        navigate('/us');
+    }
     const [isOpen,setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -26,7 +29,7 @@ export function NavBar() {
                 <ul className="list_menu_links">
                     <li><a onClick={navegaI} className="a_menu_links">Home</a></li>
                     <li><a onClick={navegaS} className="a_menu_links">Services</a></li>
-                    <li><a href="#" className="a_menu_links">Why choose us</a></li>
+                    <li><a onClick={navegaW} className="a_menu_links">Why choose us</a></li>
                     <li><a onClick={navegaC} className="a_menu_links">Contact</a></li>
                     <li><a href="https://www.instagram.com/fbstormx/" className="a_menu_links"><FontAwesomeIcon icon={faInstagram} className='i-social' /></a></li>
                     <li><a href="https://www.facebook.com/profile.php?id=61589730987278" className="a_menu_links"><FontAwesomeIcon icon={faFacebook} className='i-social' /></a></li>

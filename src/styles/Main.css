@@ -43,7 +43,7 @@ section {
   background-repeat: no-repeat;
 }
 
-.section1_main h1, .section1_main p {
+.section1_main h1,.section1_main h2,.section1_main h3, .section1_main p {
   color: #fbfafa;
 }
 

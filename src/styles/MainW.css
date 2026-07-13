@@ -1,0 +1,47 @@
+.main-w {
+    padding: 2em 1em 1em 1em;
+    background-color: #011337;
+    color: #fbfafa;
+}
+
+.main-w h1, .main-w h2 {
+    text-align: center;
+}
+
+.main-w h2 {
+    font-size: 1.4rem;
+}
+
+.main-w ul {
+    margin: 2em 0;
+}
+
+.main-w ul li {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.main-w p {
+    font-size: 1.2rem;
+}
+
+.sub-p {
+    text-align: center;
+    font-family: "industry",sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 4em 0 1em 0;
+}
+
+@media  screen and (min-width: 800px) {
+    .main-w ul {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    .main-w h2 {
+        max-width: 750px;
+        font-size: 1.5rem;
+        margin: 1em auto 3em auto;
+    }
+}
