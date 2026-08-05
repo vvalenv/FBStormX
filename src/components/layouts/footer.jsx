@@ -6,7 +6,7 @@ export function Footer() {
         <footer className='footer'>
             <div className="d-elem-footer">
                 <FontAwesomeIcon icon={faLocationDot} style={{color: "#fbfafa",}} className='icon-footer'/>
-                <p className='p-footer'> Proudly serving South Florida</p>
+                <p className='p-footer'>South Florida</p>
             </div>
             <div className="d-elem-footer">
                 <FontAwesomeIcon icon={faClock} style={{color: "#fbfafa",}} className='icon-footer'/>
