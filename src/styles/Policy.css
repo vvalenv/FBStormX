@@ -1,0 +1,26 @@
+.main-policy {
+    padding: 0 1em 1em 1em;
+}
+
+.main-policy h3, .main-policy h1, .main-policy h4 {
+    color: #011337;
+}
+
+.main-policy h3 {
+    margin-top: 1em;
+}
+
+.main-policy ol {
+    padding-left: 1.5em;
+    margin-right: 1em;
+}
+
+.main-policy ol div ul {
+    list-style: disc;
+}
+
+@media  screen and (min-width: 800px) {
+    .main-policy p {
+        max-width: 80%;
+    }
+}

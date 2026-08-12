@@ -56,7 +56,7 @@ export function Main() {
                 <div>
                     <div className="main-contact">
                         <h1 className="title_main secondary-t">Schedule your free consultation</h1>
-                        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D3h00000679PE" method="POST" className="form-contact">
+                        <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DO100000NtNmm" method="POST" className="form-contact">
                             <input type="hidden" name="oid" value="00D3h00000679PE" />
                             <input type="hidden" name="retURL" value="fbstormx.com" />
                             <input type="hidden" name="00NPj000005ezLF" value="WebForm" />
@@ -88,6 +88,14 @@ export function Main() {
                                 <label htmlFor="description">Service request</label>
                                 <textarea id="description" name="description"></textarea>
                             </div>
+                            <div className="form-group-checkbox">
+                                <label htmlFor="00NO100000OjVTG">Marketing &amp; SMS Consent:</label>
+                                <input  id="00NO100000OjVTG" name="00NO100000OjVTG" type="checkbox" value="1" />
+                            </div>
+                            <p className="p-subtext-terms">I agree to receive recurring marketing and informational text messages from FBStormX at the
+                                phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to
+                                unsubscribe or HELP for help. Consent is not a condition of purchase. View our <a href="/privacy-policy">Privacy Policy</a> and 
+                                <a href="#"> Terms &amp;Conditions</a>.</p>
                             <input type="submit" name="submit" className="submit-contact" value="Send"/>
                         </form>
                     </div>
