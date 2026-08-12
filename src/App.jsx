@@ -12,6 +12,7 @@ import { Cont } from './components/pages/contact'
 import { Services } from './components/pages/services'
 import { WhyChooseUs } from './components/pages/choose'
 import { Privacy } from './components/pages/privacy-policy'
+import { Sms } from './components/pages/sms'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/services" element={<Services />}/>
       <Route path="/us" element={<WhyChooseUs />}/>
       <Route path="/privacy-policy" element={<Privacy />}/>
+      <Route path="/sms-terms" element={<Sms />}/>
     </Routes>
   )
 }
