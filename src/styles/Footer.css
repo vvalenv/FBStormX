@@ -150,6 +150,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 1em;
+    gap: 2.2em;
   }
 
   /*MAP*/
