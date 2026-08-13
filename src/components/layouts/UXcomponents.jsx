@@ -63,3 +63,21 @@ export function CardService({nombre,img,desc}) {
         </div>
     );
 }
+
+export const GoogleReviews = () => {
+  useEffect(() => {
+    // Si la plataforma de Elfsight ya cargó en el documento, fuerza la inicialización del widget
+    if (window.ElfsightPlatform) {
+      window.ElfsightPlatform.init();
+    }
+  }, []);
+
+  return (
+    <section className="reviews-section">
+      <div 
+        className="elfsight-app-a6aa61e1-6d26-4190-b0f9-9a46bdfde6bc" 
+        data-elfsight-app-lazy
+      ></div>
+    </section>
+  );
+};

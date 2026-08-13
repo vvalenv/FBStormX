@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 import Card from "./UXcomponents";
+import { GoogleReviews } from "./UXcomponents";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 //import ReCAPTCHA from "react-google-recaptcha";
 
@@ -156,6 +157,7 @@ export function Main() {
                     </div>
                 </div>
             </section>
+            <GoogleReviews />
             <section className="section5_main"> 
                 <h3 className="title_main secondary-t">Why homeowners choose FB STORMX</h3>
                 <ul>

@@ -4,10 +4,12 @@ import { ContactMain } from "../layouts/main-c";
 
 export function Cont() {
     return (
-        <>
-            <NavBar />
-            <ContactMain />
-            <Footer />
-        </>
+        <div className="body_init">
+            <>
+                <NavBar />
+                <ContactMain />
+                <Footer />
+            </>
+        </div>
     )
 }

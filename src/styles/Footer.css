@@ -2,12 +2,27 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #FB4E02, #e14300 100%);
+  padding: 1em 10px;
+  justify-content: space-between;
+}
+
+.d-footer-icons {
+  display: flex;
   flex-direction: row;
   background-image: linear-gradient(to right, #FB4E02, #e14300 100%);
   justify-content: space-around;
   align-items: center;
-  padding: 1em 10px;
   gap: 0.5em;
+}
+
+.footer-rights {
+  color: #fbfafa;
+}
+
+.footer-rights p {
+  margin: 0;
 }
 
 .d-elem-footer {
@@ -32,6 +47,14 @@
 
 @media screen and (min-width: 800px) {
 /*FOOTER*/
+
+  .d-footer-icons {
+    margin-top: 0.5em;
+  }
+
+  .footer-rights p {
+    font-size: 1.1rem;
+  }
 
   .p-footer {
     font-size: 1.3rem;

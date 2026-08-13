@@ -4,10 +4,12 @@ import { Footer } from "../layouts/footer";
 
 export function WhyChooseUs() {
     return(
-        <>
-            <NavBar />
-            <ChooseUs />
-            <Footer />
-        </>
+        <div className="body_init">
+            <>
+                <NavBar />
+                <ChooseUs />
+                <Footer />
+            </>
+        </div>
     )
 }
