@@ -6,7 +6,7 @@ import truck from "../../assets/icons/truck.png";
 import glue from "../../assets/icons/glue.png";
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 import Card from "./UXcomponents";
 import { GoogleReviews } from "./UXcomponents";
@@ -22,6 +22,12 @@ export function Main() {
         });
         navigate('/services'); 
     };
+    const navegaWindow = () => {
+        window.scrollTo({
+            top:0
+        });
+        navigate('/services/window-repair-south-florida');
+    }
     const numeroTelefono = "3055191550";
     const [origen] = useState(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') {
@@ -52,7 +58,14 @@ export function Main() {
                         they&#39;ve been putting off before<span> they become expensive problems.</span></h2>
                     <h3 className="subtitle_main aux">Fix the small things today.</h3>
                     <p className="p-contact">Call us now!</p>
-                    <button className="btn_schedule"><a href={`tel:${numeroTelefono}`}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</a></button>
+                    <div className="d-aux-btn">
+                        <button className="btn_schedule">
+                            <a href={`tel:${numeroTelefono}`}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</a>
+                        </button>
+                        <button onClick={navegaS} className="btn_schedule" id="btn_services">
+                            <a><FontAwesomeIcon icon={faScrewdriverWrench} /> View our services</a>
+                        </button>
+                    </div>
                 </div>
                 <div>
                     <div className="main-contact">
@@ -110,12 +123,13 @@ export function Main() {
                 <div className="div-cards">
                     <Card nombre="Minor Roof Repairs" img="roof.png" ir={navegaS}/>
                     <Card nombre="Door Repair Services" img="door.png" ir={navegaS}/>
-                    <Card nombre="Window Repair Services" img="window.png" ir={navegaS}/>
+                    <Card nombre="Window Repair Services" img="window.png" ir={navegaWindow}/>
                     <Card nombre="Caulking Services" img="caulking.png" ir={navegaS}/>
                     <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir={navegaS}/>
                     <Card nombre="Decorative Glass Doors" img="door1.jpg" ir={navegaS}/>
                 </div>
             </section>
+            <GoogleReviews />
             <section className="section2_main">
                 <h2 className="title_main secondary-t">Are Any of These Issues Familiar?</h2>
                 <ul>
@@ -157,7 +171,6 @@ export function Main() {
                     </div>
                 </div>
             </section>
-            <GoogleReviews />
             <section className="section5_main"> 
                 <h3 className="title_main secondary-t">Why homeowners choose FB STORMX</h3>
                 <ul>

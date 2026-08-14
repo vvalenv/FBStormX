@@ -1,6 +1,7 @@
 import { Footer } from "../layouts/footer";
 import { NavBar } from "../layouts/header";
 import { Main } from "../layouts/main_init";
+import { useEffect } from "react";
 
 export function Init() {
     const inicializarRastreo = () => {
@@ -25,6 +26,16 @@ export function Init() {
         }
     };
     inicializarRastreo();
+    useEffect(() => {
+        document.title = 'FBStormX';
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute(
+                'content', 
+                'A website that guides you to repair small things.'
+            );
+        }
+    }, []);
     return (
         <div className="body_init">
             <>

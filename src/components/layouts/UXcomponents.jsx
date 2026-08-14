@@ -57,11 +57,24 @@ export function CardService({nombre,img,desc}) {
         <div className="div-service">
             <img src={rutaImagen} alt={nombre} className="service-img"/>
             <div>
-                <p className="service-name">{nombre}</p>
+                <h2 className="service-name">{nombre}</h2>
                 <p className="service-desc">{desc}</p>
             </div>
         </div>
     );
+}
+
+export const FrontPage = ({title, subtitle, desc, subDesc, imgS}) => {
+  return (
+    <section className="front-page" id={imgS}>
+      <div>
+        <h1 className="title_main secondary-t">{title}</h1>
+        <p className="fp-subtitle">{subtitle}</p>
+        <p className="fp-desc">{desc}</p>
+        <p className="fp-subdesc">{subDesc}</p>
+      </div>
+    </section>
+  )
 }
 
 export const GoogleReviews = () => {

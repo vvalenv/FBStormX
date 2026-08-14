@@ -1,0 +1,23 @@
+.sec-service-desc {
+    color: #011337;
+    margin: 0 1em;
+}
+
+.sec-service-desc h2 {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.sec-service-desc p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.sec-service-desc ul {
+    padding-left: 0.5em;
+}
+
+.sec-service-desc ul li {
+    font-size: 1.2rem;
+    font-weight: 500;
+}

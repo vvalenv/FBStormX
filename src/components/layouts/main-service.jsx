@@ -3,8 +3,8 @@ import { ScrollAnimate,CardService } from "./UXcomponents";
 export function MainS() {
     return (
         <main className="main-s">
-            <h2 className="title_main secondary-t">One Visit. Multiple Repairs. Problem Solved.</h2>
-            <p className="subtitle_service">Professional Workmanship <span> at a Fair Price.</span></p>
+            <h1 className="title_main secondary-t">One Visit. Multiple Repairs. Problem Solved.</h1>
+            <h2 className="subtitle_service">Professional Workmanship <span> at a Fair Price.</span></h2>
             <p className="subtitle2_service">From minor repairs to everyday home projects, FB StormX assists homeowners with the jobs they've been putting off. Our experienced team delivers dependable, high-quality workmanship with the convenience of completing multiple tasks in a single visit.</p>
             <div className="div-servicess">
                 <ScrollAnimate className="service-col" animationClass="fade-left">
