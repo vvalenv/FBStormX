@@ -18,6 +18,12 @@ export function NavBar() {
     const navegaServiceWindow = () => {
         navigate('/services/window-repair-south-florida');
     }
+    const navegaServiceDoorR = () => {
+        navigate('/services/sliding&front-door-repair-south-florida');
+    }
+    const navegaCaulking = () => {
+        navigate('/services/caulking-water-intrusion-south-florida');
+    }
     const [isOpen,setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -49,8 +55,8 @@ export function NavBar() {
                         <a className="a_menu_links submenu-btn">Services</a>
                         <ul className="submenu">
                             <li><a onClick={navegaServiceWindow} className="a_menu_links sub_a_menu_links">Window Repair</a></li>
-                            <li><a className="a_menu_links sub_a_menu_links">Glass Door Repair</a></li>
-                            <li><a className="a_menu_links sub_a_menu_links">Caulking Services</a></li>
+                            <li><a onClick={navegaServiceDoorR} className="a_menu_links sub_a_menu_links">Glass Door Repair</a></li>
+                            <li><a onClick={navegaCaulking} className="a_menu_links sub_a_menu_links">Caulking Services</a></li>
                             <li><a className="a_menu_links sub_a_menu_links">Roof Leak Repair</a></li>
                             <li><a className="a_menu_links sub_a_menu_links">Junk Removal</a></li>
                             <li><a className="a_menu_links sub_a_menu_links">Glass Door Inserts</a></li>

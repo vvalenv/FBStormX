@@ -283,6 +283,7 @@ h1,h2,h3,h4 {
 .front-page {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   color: #fbfafa;
 }
 
@@ -315,6 +316,14 @@ h1,h2,h3,h4 {
 
 #window-repair-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../assets/services/window-repair-south-florida.png');
+}
+
+#door-repair-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../assets/services/door-repair-south-florida.png');
+}
+
+#caulking-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../assets/services/caulking-service-window-door-south-florida.png');
 }
 
 .btn_book {

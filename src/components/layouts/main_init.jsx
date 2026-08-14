@@ -28,6 +28,18 @@ export function Main() {
         });
         navigate('/services/window-repair-south-florida');
     }
+    const navegaServiceDoorR = () => {
+        window.scrollTo({
+            top:0
+        });
+        navigate('/services/sliding&front-door-repair-south-florida');
+    }
+    const navegaCaulking = () => {
+        window.scrollTo({
+            top:0
+        });
+        navigate('/services/caulking-water-intrusion-south-florida');
+    }
     const numeroTelefono = "3055191550";
     const [origen] = useState(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') {
@@ -122,9 +134,9 @@ export function Main() {
                 <h2 className="title_main secondary-t">All you minor home repairs, solved in one place</h2>
                 <div className="div-cards">
                     <Card nombre="Minor Roof Repairs" img="roof.png" ir={navegaS}/>
-                    <Card nombre="Door Repair Services" img="door.png" ir={navegaS}/>
+                    <Card nombre="Door Repair Services" img="door.png" ir={navegaServiceDoorR}/>
                     <Card nombre="Window Repair Services" img="window.png" ir={navegaWindow}/>
-                    <Card nombre="Caulking Services" img="caulking.png" ir={navegaS}/>
+                    <Card nombre="Caulking Services" img="caulking.png" ir={navegaCaulking}/>
                     <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir={navegaS}/>
                     <Card nombre="Decorative Glass Doors" img="door1.jpg" ir={navegaS}/>
                 </div>

@@ -15,6 +15,8 @@ import { WhyChooseUs } from './components/pages/choose'
 import { Privacy } from './components/pages/privacy-policy'
 import { Sms } from './components/pages/sms'
 import { WindowRepair } from './components/pages/window'
+import { DoorRepair } from './components/pages/door-repair'
+import { Caulking } from './components/pages/caulking'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Route path="/contact" element={<Cont />}/>
       <Route path="/services" element={<Services />}/>
       <Route path="/services/window-repair-south-florida" element={<WindowRepair />}/>
+      <Route path="/services/sliding&front-door-repair-south-florida" element={<DoorRepair />}/>
+      <Route path="/services/caulking-water-intrusion-south-florida" element={<Caulking />}/>
       <Route path="/us" element={<WhyChooseUs />}/>
       <Route path="/privacy-policy" element={<Privacy />}/>
       <Route path="/sms-terms" element={<Sms />}/>
