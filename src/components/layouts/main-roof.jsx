@@ -48,7 +48,7 @@ export function MainRoof() {
                 <h2>Catch it before the next storm</h2>
                 <p>A loose tile or a small opening in the flashing is manageable in dry weather. The same opening during a storm can move a large amount of water into your home in a matter of hours. The window to fix it easily is now, not later.</p>
                 <h2>Frequently Asked Questions</h2>
-                <ul>
+                <ul className="ul-FAQ">
                     <li>There is a stain on my ceiling. Does that mean the roof is leaking?</li>
                     <p>Not necessarily. Water may enter through the roof, flashing, a penetration, an exterior wall, a window, or
                         another nearby area before appearing on the ceiling. The likely source should be evaluated before

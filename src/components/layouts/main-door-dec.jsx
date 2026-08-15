@@ -46,7 +46,7 @@ export function MainDoorDecorative() {
                 </ul>
                 <p className="fp-subdesc">Upgrade Your Door—Without Replacing It.</p>
                 <h2>Frequently Asked Questions</h2>
-                <ul>
+                <ul className="ul-FAQ">
                     <li>Can a glass insert be installed in any door?</li>
                     <p>Not every door is suitable. Compatibility depends on the door’s material, construction, dimensions, condition,
                         and applicable building requirements. We evaluate the existing door before confirming the installation.</p>

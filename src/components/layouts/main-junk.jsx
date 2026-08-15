@@ -40,7 +40,7 @@ export function MainJunk() {
                 <p>Already scheduling FB StormX for a home repair? Ask about adding junk removal to the same appointment.</p>
                 <p className="fp-subdesc">One Visit. More Accomplished.</p>
                 <h2>Frequently Asked Questions</h2>
-                <ul>
+                <ul className="ul-FAQ">
                     <li>Do I need to move everything outside first?</li>
                     <p>No. In most cases, our team can remove approved items from the garage, patio, storage area, or another
                         accessible location. Let us know in advance about stairs, narrow access points, large or heavy objects.</p>

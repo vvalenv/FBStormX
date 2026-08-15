@@ -23,3 +23,38 @@
     font-size: 1.2rem;
     font-weight: 500;
 }
+
+@media screen and (min-width: 800px) {
+
+    .sec-service-desc h2 {
+        font-size: 2rem;
+    }
+
+    .sec-service-desc ul {
+        width: 550px;
+        margin: auto;
+    }
+
+    .sec-service-desc ul li {
+        font-size: 1.4rem;
+    }
+
+    .sec-service-desc p {
+        max-width: 600px;
+        font-size: 1.3rem;
+        margin: auto;
+    }
+
+    .ul-FAQ {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .btn_book {
+        margin: 1.5em 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

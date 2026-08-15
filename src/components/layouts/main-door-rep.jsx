@@ -43,7 +43,7 @@ export function MainDoorRepair() {
                 <h2>Why doors get harder to open in South Florida</h2>
                 <p>Salt air, humidity and constant use wear down rollers and tracks faster here than in most of the country. Sand and debris build up in the track, the door starts dragging, and the rollers take more of the weight than they were designed to carry. Left alone long enough, the door can come off the track completely, and a simple repair turns into a much bigger job.</p>
                 <h2>Frequently Asked Questions</h2>
-                <ul>
+                <ul className="ul-FAQ">
                     <li>My Sliding Glass Door is extremely heavy. Does it need to be replaced?</li>
                     <p>Not necessarily. Heavy or difficult movement is often caused by worn rollers, accumulated dirt or sand, track
                         damage, or poor alignment. We evaluate before recommending repair or replacement.</p>

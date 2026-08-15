@@ -45,7 +45,7 @@ export function MainCaulking() {
                     <li>Evaluation of potential water-entry points.</li>
                 </ul>                
                 <h2>Frequently Asked Questions</h2>
-                <ul>
+                <ul className="ul-FAQ">
                     <li>How often should exterior caulking be renewed?</li>
                     <p>There is no single schedule for every home. Caulking should be inspected periodically and renewed when it
                         begins to crack, separate, shrink, or lose adhesion. Exposure to sun, heat, moisture, and movement can affect

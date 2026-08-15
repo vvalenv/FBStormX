@@ -44,7 +44,7 @@ export function MainWindow() {
                 <h2>More done in one visit</h2>
                 <p>While we're at your home, we can take care of other repairs on your list too, from sliding glass doors to caulking around the frames. One visit, multiple repairs, problem solved.</p>
                 <h2>Frequently Asked Questions</h2>
-                <ul>
+                <ul className="ul-FAQ">
                     <li>How long does a window repair take?</li>
                     <p>Many common window repairs and adjustments can be completed during a single visit. The actual time
                         depends on the condition of the window and the parts or repairs required.</p>
