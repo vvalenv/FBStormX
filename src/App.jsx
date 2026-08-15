@@ -17,6 +17,9 @@ import { Sms } from './components/pages/sms'
 import { WindowRepair } from './components/pages/window'
 import { DoorRepair } from './components/pages/door-repair'
 import { Caulking } from './components/pages/caulking'
+import { RoofRepair } from './components/pages/roof'
+import { JunkRemoval } from './components/pages/junk'
+import { DoorDecorative } from './components/pages/door-dec'
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
       <Route path="/services/window-repair-south-florida" element={<WindowRepair />}/>
       <Route path="/services/sliding&front-door-repair-south-florida" element={<DoorRepair />}/>
       <Route path="/services/caulking-water-intrusion-south-florida" element={<Caulking />}/>
+      <Route path="/services/roof-repair-south-florida" element={<RoofRepair />}/>
+      <Route path="/services/junk-removal-south-florida" element={<JunkRemoval />}/>
+      <Route path="/services/decorative-glass-door-inserts-south-florida" element={<DoorDecorative />}/>
       <Route path="/us" element={<WhyChooseUs />}/>
       <Route path="/privacy-policy" element={<Privacy />}/>
       <Route path="/sms-terms" element={<Sms />}/>

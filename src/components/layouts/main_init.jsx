@@ -40,6 +40,25 @@ export function Main() {
         });
         navigate('/services/caulking-water-intrusion-south-florida');
     }
+    const navegaRoof = () => {
+        window.scrollTo({
+            top:0
+        });
+        navigate('/services/roof-repair-south-florida');
+    }
+    const navegaJunk = () => {
+        window.scrollTo({
+            top:0
+        });
+        navigate('/services/junk-removal-south-florida');
+    }
+    const navegaDec = () => {
+        window.scrollTo({
+            top:0
+        });
+        navigate('/services/decorative-glass-door-inserts-south-florida');
+    }
+
     const numeroTelefono = "3055191550";
     const [origen] = useState(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') {
@@ -133,12 +152,12 @@ export function Main() {
             <section className="section4_main">
                 <h2 className="title_main secondary-t">All you minor home repairs, solved in one place</h2>
                 <div className="div-cards">
-                    <Card nombre="Minor Roof Repairs" img="roof.png" ir={navegaS}/>
+                    <Card nombre="Minor Roof Repairs" img="roof.png" ir={navegaRoof}/>
                     <Card nombre="Door Repair Services" img="door.png" ir={navegaServiceDoorR}/>
                     <Card nombre="Window Repair Services" img="window.png" ir={navegaWindow}/>
                     <Card nombre="Caulking Services" img="caulking.png" ir={navegaCaulking}/>
-                    <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir={navegaS}/>
-                    <Card nombre="Decorative Glass Doors" img="door1.jpg" ir={navegaS}/>
+                    <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir={navegaJunk}/>
+                    <Card nombre="Decorative Glass Doors" img="door1.jpg" ir={navegaDec}/>
                 </div>
             </section>
             <GoogleReviews />

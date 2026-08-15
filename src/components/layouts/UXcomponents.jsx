@@ -98,7 +98,7 @@ export const GoogleReviews = () => {
 export const GoogleMap = () => {
   return (
      <div className='map-container'>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d652376.6677522609!2d-81.59060012870827!3d25.407957536423687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b99f890ae98f%3A0x5bd85f8ddafd854d!2sFB%20stormX!5e0!3m2!1ses-419!2sar!4v1786636465780!5m2!1ses-419!2sar" title='FB stormX' loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.851199115654!2d-80.34039842560075!3d25.808482706672322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b963fcd0d1d3%3A0x4e44ddc097b5d9d7!2s3750%20NW%2087th%20Ave%20Ste%20700%2C%20Doral%2C%20FL%2033178%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1786754245617!5m2!1ses-419!2sar" title='FB stormX' loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
   )
 }
