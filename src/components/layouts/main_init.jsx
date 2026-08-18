@@ -4,61 +4,18 @@ import windowIcon from "../../assets/icons/window.png";
 import construction from "../../assets/icons/construction.png";
 import truck from "../../assets/icons/truck.png";
 import glue from "../../assets/icons/glue.png";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 import Card from "./UXcomponents";
-import { GoogleReviews } from "./UXcomponents";
+import { GoogleReviews} from "./UXcomponents";
+import { useFollowURL } from "../../hooks/followURL";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 //import ReCAPTCHA from "react-google-recaptcha";
 
 
 export function Main() {
-    const navigate = useNavigate();
-    const navegaS = () => {
-        window.scrollTo({
-            top:0
-        });
-        navigate('/services'); 
-    };
-    const navegaWindow = () => {
-        window.scrollTo({
-            top:0
-        });
-        navigate('/services/window-repair-south-florida');
-    }
-    const navegaServiceDoorR = () => {
-        window.scrollTo({
-            top:0
-        });
-        navigate('/services/sliding&front-door-repair-south-florida');
-    }
-    const navegaCaulking = () => {
-        window.scrollTo({
-            top:0
-        });
-        navigate('/services/caulking-water-intrusion-south-florida');
-    }
-    const navegaRoof = () => {
-        window.scrollTo({
-            top:0
-        });
-        navigate('/services/roof-repair-south-florida');
-    }
-    const navegaJunk = () => {
-        window.scrollTo({
-            top:0
-        });
-        navigate('/services/junk-removal-south-florida');
-    }
-    const navegaDec = () => {
-        window.scrollTo({
-            top:0
-        });
-        navigate('/services/decorative-glass-door-inserts-south-florida');
-    }
-
+    const followURL = useFollowURL();
     const numeroTelefono = "3055191550";
     const [origen] = useState(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') {
@@ -93,7 +50,7 @@ export function Main() {
                         <button className="btn_schedule">
                             <a href={`tel:${numeroTelefono}`}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</a>
                         </button>
-                        <button onClick={navegaS} className="btn_schedule" id="btn_services">
+                        <button onClick={() => followURL('/services')} className="btn_schedule" id="btn_services">
                             <a><FontAwesomeIcon icon={faScrewdriverWrench} /> View our services</a>
                         </button>
                     </div>
@@ -152,12 +109,12 @@ export function Main() {
             <section className="section4_main">
                 <h2 className="title_main secondary-t">All you minor home repairs, solved in one place</h2>
                 <div className="div-cards">
-                    <Card nombre="Minor Roof Repairs" img="roof.png" ir={navegaRoof}/>
-                    <Card nombre="Door Repair Services" img="door.png" ir={navegaServiceDoorR}/>
-                    <Card nombre="Window Repair Services" img="window.png" ir={navegaWindow}/>
-                    <Card nombre="Caulking Services" img="caulking.png" ir={navegaCaulking}/>
-                    <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir={navegaJunk}/>
-                    <Card nombre="Decorative Glass Doors" img="door1.jpg" ir={navegaDec}/>
+                    <Card nombre="Minor Roof Repairs" img="roof.png" ir={() => followURL('/services/roof-repair-south-florida')}/>
+                    <Card nombre="Door Repair Services" img="door.png" ir={() => followURL('/services/sliding&front-door-repair-south-florida')}/>
+                    <Card nombre="Window Repair Services" img="window.png" ir={() => followURL('/services/window-repair-south-florida')}/>
+                    <Card nombre="Caulking Services" img="caulking.png" ir={() => followURL('/services/caulking-water-intrusion-south-florida')}/>
+                    <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir={() => followURL('/services/junk-removal-south-florida')}/>
+                    <Card nombre="Decorative Glass Doors" img="door1.jpg" ir={() => followURL('/services/decorative-glass-door-inserts-south-florida')}/>
                 </div>
             </section>
             <GoogleReviews />
@@ -206,7 +163,7 @@ export function Main() {
                 <h3 className="title_main secondary-t">Why homeowners choose FB STORMX</h3>
                 <ul>
                     <li><p className="elem-p">Fast response</p></li>
-                    <li><p className="elem-p">Practical solutions not (over-selling)</p></li>
+                    <li><p className="elem-p">Practical Solutions. Honest Recommendations</p></li>
                     <li><p className="elem-p">One visit multi-solution approach</p></li>
                     <li><p className="elem-p">Trusted local service</p></li>
                 </ul>

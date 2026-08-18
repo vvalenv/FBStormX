@@ -1,5 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
+
+
+/*ANIMACIONES*/
 export const ScrollAnimate = ({ children, className = '', animationClass = 'fade-up' }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementoRef = useRef(null);
@@ -41,6 +46,8 @@ export const ScrollAnimate = ({ children, className = '', animationClass = 'fade
   );
 };
 
+/*CARDS*/ 
+
 export default function Card({nombre,img,ir}) {
     const rutaImagen = new URL(`../../assets/services/${img}`, import.meta.url).href
     return (
@@ -64,18 +71,44 @@ export function CardService({nombre,img,desc}) {
     );
 }
 
+/*Portada*/
+
 export const FrontPage = ({title, subtitle, desc, subDesc, imgS}) => {
   return (
-    <section className="front-page" id={imgS}>
-      <div>
-        <h1 className="title_main secondary-t">{title}</h1>
-        <p className="fp-subtitle">{subtitle}</p>
-        <p className="fp-desc">{desc}</p>
-        <p className="fp-subdesc">{subDesc}</p>
-      </div>
-    </section>
+    <>
+      <section className="front-page" id={imgS}>
+        <ScrollAnimate animationClass="fade-right">
+          <h1 className="title_main">{title}</h1>
+          <p className="fp-subtitle">{subtitle}</p>
+          <p className="fp-desc">{desc}</p>
+          <p className="fp-subdesc">{subDesc}</p>
+        </ScrollAnimate>
+      </section>
+    </>
   )
 }
+
+/*Componentes colapsados*/
+export const Acordion = ({ title, content }) => {
+  return (
+    <details className="accordion">
+      <summary className="accordion-summary">
+        <span>{title}</span>
+        <span className="arrow"><FontAwesomeIcon icon={faAngleUp} style={{color: "#011337",}} /></span>
+      </summary>
+      
+      <div className="accordion-wrapper">
+        <div className="accordion-content">
+          <p className='accordion-p'>{content}</p>
+        </div>
+      </div>
+    </details>
+  );
+};
+
+/*aside*/ 
+
+/*Google components*/
 
 export const GoogleReviews = () => {
   useEffect(() => {
