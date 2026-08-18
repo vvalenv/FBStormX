@@ -93,8 +93,8 @@ export const Acordion = ({ title, content }) => {
   return (
     <details className="accordion">
       <summary className="accordion-summary">
-        <span>{title}</span>
-        <span className="arrow"><FontAwesomeIcon icon={faAngleUp} style={{color: "#011337",}} /></span>
+        <span className='accordion-title'>{title}</span>
+        <span><FontAwesomeIcon icon={faAngleUp} className='arrow' /></span>
       </summary>
       
       <div className="accordion-wrapper">

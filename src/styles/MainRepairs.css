@@ -1,6 +1,12 @@
 .sec-service-desc {
-    color: #011337;
-    margin: 0 1em;
+    color: #fbfafa;
+    background-color: #011337;
+    padding: 0;
+}
+
+.div-data-services {
+    background-color: #FB4E02;
+    padding: 1em;
 }
 
 .sec-service-desc h2 {
@@ -40,7 +46,7 @@
 /*acordion*/
 
 .accordion {
-  border: 1px solid #011337a9;
+  border: 1px solid #fbfafa;
   border-radius: 8px;
   width: 90%;
   margin: auto;
@@ -57,6 +63,10 @@
   list-style: none; 
 }
 
+.accordion-title {
+    font-size: 1.4rem;
+}
+
 /* Oculta el marcador por defecto en Safari/WebKit */
 .accordion-summary::-webkit-details-marker {
   display: none;
@@ -66,6 +76,7 @@
 .accordion .arrow {
   display: inline-block;
   font-size: 1rem;
+  color: #fbfafa;
   transition: transform 0.3s ease;
 }
 
@@ -89,7 +100,7 @@
 .accordion-content {
   overflow: hidden;
   padding: 0 16px;
-  color: #011337;
+  color: #fbfafa;
   line-height: 1.5;
 }
 
@@ -152,7 +163,7 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1124px) {
 
     .sec-service-desc h2, .sec-service-desc p, .sec-service-desc ul li {
         text-align: center;
