@@ -91,8 +91,12 @@ export function Main() {
                                 <textarea id="description" name="description"></textarea>
                             </div>
                             <div className="form-group-checkbox">
-                                <label htmlFor="00NO100000OjVTG">Marketing &amp; SMS Consent:</label>
-                                <input  id="00NO100000OjVTG" name="00NO100000OjVTG" type="checkbox" value="1" />
+                                <label htmlFor="00NPj000005tyVL">Email Marketing Consent:</label>
+                                <input  id="00NPj000005tyVL" name="00NPj000005tyVL" type="checkbox" value="1" />
+                            </div>
+                            <div className="form-group-checkbox">
+                                <label htmlFor="00NPj000005tyVM">SMS Marketing Consent:</label>
+                                <input  id="00NPj000005tyVM" name="00NPj000005tyVM" type="checkbox" value="1" />
                             </div>
                             <p className="p-subtext-terms">I agree to receive recurring marketing and informational text messages from FBStormX at the
                                 phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to
@@ -107,7 +111,7 @@ export function Main() {
                 </div>
             </section>
             <section className="section4_main">
-                <h2 className="title_main secondary-t">All you minor home repairs, solved in one place</h2>
+                <h2 className="title_main secondary-t">All your minor home repairs, solved in one place</h2>
                 <div className="div-cards">
                     <Card nombre="Minor Roof Repairs" img="roof.png" ir={() => followURL('/services/roof-repair-south-florida')}/>
                     <Card nombre="Door Repair Services" img="door.png" ir={() => followURL('/services/sliding&front-door-repair-south-florida')}/>
@@ -131,7 +135,7 @@ export function Main() {
             </section>
             <section className="section3_main">
                 <h2 className="title_main secondary-t">One visit. Multiple problems solved.</h2>
-                <p className="subtitle_main" id="aux-p">Instead of calling 6 contractors, we handle everything in one visit.</p>
+                <h3 className="subtitle_main" id="aux-p">Instead of calling 6 contractors, we handle everything in one visit.</h3>
                 <div className="div-services">
                     <div className="elem-service">
                         <img src={roof} alt="roof" className="elem-img"/>
@@ -170,7 +174,7 @@ export function Main() {
                 
             </section>
             <section className="section6_main">
-                <h4 className="title_main secondary-t" id="last-title"> Let's Take Care of Those Small Problems Before,<span> They Become Bigger Ones</span></h4>
+                <h3 className="title_main secondary-t" id="last-title"> Let's Take Care of Those Small Problems Before,<span> They Become Bigger Ones</span></h3>
                 <div className="d-sec6">
                     <p className="p-sec5">Don't wait until it becomes expensive.</p>
                     <p className="p-sec5">That small issue you are ignoring? We fix it in hours, not weeks.</p>

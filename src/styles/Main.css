@@ -134,7 +134,7 @@ section {
 .elem-p, .elem-p-service {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #011337;
+  color: #FB4E02;
 }
 
 /*SECCION 4*/
@@ -243,6 +243,7 @@ section {
 
     .elem-p-service {
         font-size: 1.4rem;
+        max-width: 200px;
         text-align: center;
     }
 
@@ -267,13 +268,15 @@ section {
 
     .div-services {
         flex-direction: row;
+         align-items: flex-start;
         width: 100%;
         margin: 3em 0 1em 0;
     }
 
     .elem-service {
+        display: flex;
         flex-direction: column;
-        gap: 0;
+        justify-items: center;
     }
 
     /*SECCION 4*/

@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
-
+import { faAngleUp, faWrench, faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faClipboard } from '@fortawesome/free-regular-svg-icons';
+import { useFollowURL } from "../../hooks/followURL";
 
 
 /*ANIMACIONES*/
@@ -107,6 +108,50 @@ export const Acordion = ({ title, content }) => {
 };
 
 /*aside*/ 
+
+export const Aside = () => {
+  return (
+    <aside className="aside_aproach">
+      <h3 className="aside-title">Our approach</h3>
+      <div className="aside-div">
+        <FontAwesomeIcon icon={faClipboard} className="aside-icon" />
+        <div>
+          <h4>We evaluate</h4>
+          <p>We inspect and identify the true source of the problem.</p>
+        </div>
+      </div>
+      <div className="aside-div">
+         <FontAwesomeIcon icon={faThumbsUp} className="aside-icon" />
+         <div>
+          <h4>We recommend</h4>
+          <p>We explain your options clearly and honestly.</p>
+         </div>
+      </div>
+      <div className="aside-div">
+        <FontAwesomeIcon icon={faWrench} className="aside-icon" />
+        <div>
+          <h4>We repair</h4>
+          <p>We fix it right and often in a single visit.</p>
+        </div>
+      </div>
+    </aside>
+  )
+}
+
+/*button free consultation*/
+
+export const BtnFreeConsultation = () => {
+  const followURL = useFollowURL();
+  return (
+    <div className="container-btn-book">
+      <h3 className="h3-btn-book">Book Your Free Consultation</h3>
+      <p className="p-btn-book">We will evaluate the problem, explain your options, and provide a clear estimate.</p>
+      <button className="btn_schedule btn_book" onClick={() => followURL('/')}>
+        <a><FontAwesomeIcon icon={faAddressBook}/> Schedule Now</a>
+      </button>
+    </div>
+  );
+}
 
 /*Google components*/
 
