@@ -192,6 +192,10 @@ section {
   padding: 1em;
 }
 
+#last-title {
+  font-size: 1.9rem;
+}
+
 #last-title span {
   display: block;
 }

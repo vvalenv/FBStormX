@@ -378,7 +378,11 @@ h1,h2,h3,h4 {
 }
 
 .btn_book {
-  margin: 0.5em;
+  margin: 0.6em;
+}
+
+.container-btn-book {
+  margin-top: 2em;
 }
 
 /*Aside*/
@@ -572,7 +576,6 @@ h1,h2,h3,h4 {
 
   .container-btn-book {
     width: 700px;
-    margin: 1em auto;
   }
  
 }
