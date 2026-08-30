@@ -14,11 +14,16 @@
     color: #011337;
 }
 
-.sec-service-desc h2 {
+.h2-service {
     text-align: center;
-    font-size: 1.8rem;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    font-size: 2rem;
+    color:#011337;
+    margin: 0.5em 0;
+}
+
+.h2-FAQ {
+    margin: 0.8em auto;
+    text-align: center;
 }
 
 .sec-service-desc p {
@@ -131,14 +136,15 @@
 
 @media screen and (min-width: 800px) {
 
+    .h2-service {
+        text-align: start;
+        margin-left: 0.5em;
+    }
+
     .sec-service-desc h2 {
         font-size: 2rem;
         max-width: 650px;
         text-align: start;
-    }
-
-    .h2-FAQ {
-        margin: auto;
     }
 
     .sec-service-desc ul {
@@ -193,8 +199,12 @@
         justify-content: space-around;
     }
 
-    #div-data-window {
+    .div-data-window {
         grid-template-columns: 32% 32% 32%;   
+    }
+
+    .div-data-doorR {
+        grid-template-columns: 40% 40%;   
     }
 
     .accordion {

@@ -21,7 +21,7 @@ export function MainWindow() {
                 imgS="window-repair-img" 
             />
             <section className="section3_main">
-                    <h2 className="title_main secondary-t" id="h2-service">What our window repair service includes</h2>
+                    <h2 className="h2-service">What our window repair service includes</h2>
                     <div className="section3-container">
                         <div className="div-services">
                             <div className="elem-service">
@@ -47,7 +47,7 @@ export function MainWindow() {
                 </div>
             </section>
             <section className="sec-service-desc">
-                <div className="div-data-services" id="div-data-window">
+                <div className="div-data-services div-data-window">
                     <div className="elem-data-service">
                         <h2>Signs your window needs attention</h2>
                         <ul>
