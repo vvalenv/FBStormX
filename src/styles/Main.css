@@ -292,6 +292,7 @@ section {
     max-width: 800px;
     margin: 3em auto 1em auto;
     row-gap: 3em;
+    column-gap: 1em;
   }
 
     /*SECCION 5*/

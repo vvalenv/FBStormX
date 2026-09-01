@@ -28,7 +28,7 @@ function App() {
       <Route path="/contact" element={<Cont />}/>
       <Route path="/services" element={<Services />}/>
       <Route path="/services/window-repair-south-florida" element={<WindowRepair />}/>
-      <Route path="/services/sliding&front-door-repair-south-florida" element={<DoorRepair />}/>
+      <Route path="/services/sliding-front-door-repair-south-florida" element={<DoorRepair />}/>
       <Route path="/services/caulking-water-intrusion-south-florida" element={<Caulking />}/>
       <Route path="/services/roof-repair-south-florida" element={<RoofRepair />}/>
       <Route path="/services/junk-removal-south-florida" element={<JunkRemoval />}/>

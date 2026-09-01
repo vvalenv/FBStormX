@@ -2,8 +2,90 @@ import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp, faWrench, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp, faClipboard } from '@fortawesome/free-regular-svg-icons';
-import { useFollowURL } from "../../hooks/followURL";
+import { Link } from 'react-router-dom';
 
+/*GOOGLE REVIEWS*/
+
+export const GoogleReviews = () => {
+  const [data, setData] = useState({ reviews: [], rating: 0, userRatingCount: 0 });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const writeReviewUrl = "https://search.google.com/local/writereview?placeid=ChIJDQCSDH-35YgRaT5T3-4pU2g";
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/reviews')
+      .then((res) => {
+        if (!res.ok) throw new Error('Error en la respuesta del servidor');
+        return res.json();
+      })
+      .then((resData) => {
+        setData(resData);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError('No se pudieron cargar las reseñas.');
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <p className="reviews-loading">Loading Reviews...</p>;
+  if (error) return <p className="reviews-error">{error}</p>;
+
+  return (
+    <section className="reviews-wrapper">
+      <div className="reviews-header">
+        <h2 className="reviews-title">Our reviews</h2>
+        <div className="reviews-score">
+          <span className="rating-number">{data.rating}</span>
+          <span className="stars">{'★'.repeat(Math.round(data.rating || 5))}</span>
+          {/* Nombre actualizado: userRatingCount */}
+          <span className="total-reviews">({data.userRatingCount} Reviews on Google)</span>
+          <a href={writeReviewUrl} className="button-reviews" style={{ color: "#fbfafa" }}>
+            Leave us a review
+          </a>
+        </div>
+      </div>
+
+      <div className="reviews-grid">
+        {data.reviews && data.reviews.map((review, index) => {
+          const author = review.authorAttribution || {};
+          const reviewText = review.text?.text || review.originalText?.text || '';
+
+          return (
+            <article key={index} className="review-card">
+              <header className="review-card-header">
+                {/* Foto de perfil con photoUri */}
+                <img 
+                  src={author.photoUri || 'https://lh3.googleusercontent.com/a/default-user=s64'} 
+                  alt={author.displayName || 'Usuario de Google'} 
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.target.onerror = null; 
+                    e.target.src = 'https://lh3.googleusercontent.com/a/default-user=s64';
+                  }}
+                />
+                <div>
+                  {/* Nombre con displayName */}
+                  <strong>{author.displayName}</strong>
+                  {/* Tiempo con relativePublishTimeDescription */}
+                  <span className="review-time">{review.relativePublishTimeDescription}</span>
+                </div>
+              </header>
+
+              <div className="review-rating">
+                {'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}
+              </div>
+
+              {/* Texto extraído limpiamente */}
+              <p className="review-text">{reviewText}</p>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
 /*ANIMACIONES*/
 export const ScrollAnimate = ({ children, className = '', animationClass = 'fade-up' }) => {
@@ -52,10 +134,10 @@ export const ScrollAnimate = ({ children, className = '', animationClass = 'fade
 export default function Card({nombre,img,ir}) {
     const rutaImagen = new URL(`../../assets/services/${img}`, import.meta.url).href
     return (
-        <div className="card-s" onClick={ir}>
+        <Link to={ir} className="card-s">
             <img src={rutaImagen} alt={nombre} className="card-img"/>
             <p className="card-p">{nombre}</p>
-        </div>
+        </Link>
     );
 }
 
@@ -141,37 +223,16 @@ export const Aside = () => {
 /*button free consultation*/
 
 export const BtnFreeConsultation = () => {
-  const followURL = useFollowURL();
   return (
     <div className="container-btn-book">
       <h3 className="h3-btn-book">Book Your Free Consultation</h3>
       <p className="p-btn-book">We will evaluate the problem, explain your options, and provide a clear estimate.</p>
-      <button className="btn_schedule btn_book" onClick={() => followURL('/')}>
-        <a><FontAwesomeIcon icon={faAddressBook}/> Schedule Now</a>
-      </button>
+      <Link to="/" className="btn_schedule btn_book">
+        <span><FontAwesomeIcon icon={faAddressBook}/> Schedule Now</span>
+      </Link>
     </div>
   );
 }
-
-/*Google components*/
-
-export const GoogleReviews = () => {
-  useEffect(() => {
-    // Si la plataforma de Elfsight ya cargó en el documento, fuerza la inicialización del widget
-    if (window.ElfsightPlatform) {
-      window.ElfsightPlatform.init();
-    }
-  }, []);
-
-  return (
-    <section className="reviews-section">
-      <div 
-        className="elfsight-app-a6aa61e1-6d26-4190-b0f9-9a46bdfde6bc" 
-        data-elfsight-app-lazy
-      ></div>
-    </section>
-  );
-};
 
 export const GoogleMap = () => {
   return (

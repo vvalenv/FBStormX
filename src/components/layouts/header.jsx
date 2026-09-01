@@ -2,37 +2,9 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/logos/LOGO_FBSTORMX-22.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom'
 export function NavBar() {
-    const navigate = useNavigate();
-    const navegaI = () => {
-        navigate('/'); 
-    };
-    const navegaC = () => {
-        navigate('/contact'); 
-    };
-    const navegaW = () => {
-        navigate('/us');
-    }
-    const navegaServiceWindow = () => {
-        navigate('/services/window-repair-south-florida');
-    }
-    const navegaServiceDoorR = () => {
-        navigate('/services/sliding&front-door-repair-south-florida');
-    }
-    const navegaCaulking = () => {
-        navigate('/services/caulking-water-intrusion-south-florida');
-    }
-    const navegaRoof = () => {
-        navigate('/services/roof-repair-south-florida');
-    }
-    const navegaJunk = () => {
-        navigate('/services/junk-removal-south-florida');
-    }
-    const navegaDec = () => {
-        navigate('/services/decorative-glass-door-inserts-south-florida');
-    }
     const [isOpen,setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -56,23 +28,23 @@ export function NavBar() {
     
     return (
         <header className="header">
-            <img src={logo} alt="logo" className="logo" onClick={navegaI} />
+            <img src={logo} alt="logo" className="logo" />
             <nav className={`navbar ${isOpen ? 'menu-open' : ''}`}>
                 <ul className="list_menu_links">
-                    <li><a onClick={navegaI} className="a_menu_links">Home</a></li>
+                    <li><Link to="/" className="a_menu_links">Home</Link></li>
                     <li className="links-li container-submenu">
                         <a className="a_menu_links submenu-btn">Services</a>
                         <ul className="submenu">
-                            <li><a onClick={navegaServiceWindow} className="a_menu_links sub_a_menu_links">Window Repair</a></li>
-                            <li><a onClick={navegaServiceDoorR} className="a_menu_links sub_a_menu_links">Glass Door Repair</a></li>
-                            <li><a onClick={navegaCaulking} className="a_menu_links sub_a_menu_links">Caulking Services</a></li>
-                            <li><a onClick={navegaRoof} className="a_menu_links sub_a_menu_links">Roof Leak Repair</a></li>
-                            <li><a onClick={navegaJunk} className="a_menu_links sub_a_menu_links">Junk Removal</a></li>
-                            <li><a onClick={navegaDec} className="a_menu_links sub_a_menu_links">Glass Door Inserts</a></li>
+                            <li><Link to="/services/window-repair-south-florida" className="a_menu_links sub_a_menu_links">Window Repair</Link></li>
+                            <li><Link to="/services/sliding-front-door-repair-south-florida" className="a_menu_links sub_a_menu_links">Glass Door Repair</Link></li>
+                            <li><Link to="/services/caulking-water-intrusion-south-florida" className="a_menu_links sub_a_menu_links">Caulking Services</Link></li>
+                            <li><Link to="/services/roof-repair-south-florida" className="a_menu_links sub_a_menu_links">Roof Leak Repair</Link></li>
+                            <li><Link to="/services/junk-removal-south-florida" className="a_menu_links sub_a_menu_links">Junk Removal</Link></li>
+                            <li><Link to="/services/decorative-glass-door-inserts-south-florida" className="a_menu_links sub_a_menu_links">Glass Door Inserts</Link></li>
                         </ul>
                     </li>
-                    <li><a onClick={navegaW} className="a_menu_links">Why choose us</a></li>
-                    <li><a onClick={navegaC} className="a_menu_links">Contact</a></li>
+                    <li><Link to="/us" className="a_menu_links">Why choose us</Link></li>
+                    <li><Link to="/contact" className="a_menu_links">Contact</Link></li>
                     <li><a href="https://www.instagram.com/fbstormx/" className="a_menu_links"><FontAwesomeIcon icon={faInstagram} className='i-social' /></a></li>
                     <li><a href="https://www.facebook.com/profile.php?id=61589730987278" className="a_menu_links"><FontAwesomeIcon icon={faFacebook} className='i-social' /></a></li>
                 </ul>

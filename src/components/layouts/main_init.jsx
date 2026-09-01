@@ -8,14 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 import Card from "./UXcomponents";
-import { GoogleReviews} from "./UXcomponents";
-import { useFollowURL } from "../../hooks/followURL";
+import { GoogleReviews } from "./UXcomponents";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { Link } from 'react-router-dom';
 //import ReCAPTCHA from "react-google-recaptcha";
 
 
 export function Main() {
-    const followURL = useFollowURL();
     const numeroTelefono = "3055191550";
     const [origen] = useState(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') {
@@ -50,9 +49,9 @@ export function Main() {
                         <button className="btn_schedule">
                             <a href={`tel:${numeroTelefono}`}><FontAwesomeIcon icon={faPhone} /> (305) 519-1550</a>
                         </button>
-                        <button onClick={() => followURL('/services')} className="btn_schedule" id="btn_services">
-                            <a><FontAwesomeIcon icon={faScrewdriverWrench} /> View our services</a>
-                        </button>
+                        <Link to="/services" className="btn_schedule" id="btn_services">
+                            <span><FontAwesomeIcon icon={faScrewdriverWrench} /> View our services</span>
+                        </Link>
                     </div>
                 </div>
                 <div>
@@ -113,12 +112,12 @@ export function Main() {
             <section className="section4_main">
                 <h2 className="title_main secondary-t">All your minor home repairs, solved in one place</h2>
                 <div className="div-cards">
-                    <Card nombre="Minor Roof Repairs" img="roof.png" ir={() => followURL('/services/roof-repair-south-florida')}/>
-                    <Card nombre="Door Repair Services" img="door.png" ir={() => followURL('/services/sliding&front-door-repair-south-florida')}/>
-                    <Card nombre="Window Repair Services" img="window.png" ir={() => followURL('/services/window-repair-south-florida')}/>
-                    <Card nombre="Caulking Services" img="caulking.png" ir={() => followURL('/services/caulking-water-intrusion-south-florida')}/>
-                    <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir={() => followURL('/services/junk-removal-south-florida')}/>
-                    <Card nombre="Decorative Glass Doors" img="door1.jpg" ir={() => followURL('/services/decorative-glass-door-inserts-south-florida')}/>
+                    <Card nombre="Minor Roof Repairs" img="roof.png" ir='/services/roof-repair-south-florida'/>
+                    <Card nombre="Door Repair Services" img="door.png" ir='/services/sliding-front-door-repair-south-florida'/>
+                    <Card nombre="Window Repair Services" img="window.png" ir='/services/window-repair-south-florida'/>
+                    <Card nombre="Caulking Services" img="caulking.png" ir='/services/caulking-water-intrusion-south-florida'/>
+                    <Card nombre="Home & Storage Clean-Outs" img="junk.png" ir='/services/junk-removal-south-florida'/>
+                    <Card nombre="Decorative Glass Doors" img="door1.jpg" ir='/services/decorative-glass-door-inserts-south-florida'/>
                 </div>
             </section>
             <GoogleReviews />

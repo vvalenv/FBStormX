@@ -1,22 +1,17 @@
 import { Footer } from "../layouts/footer";
 import { NavBar } from "../layouts/header";
 import { MainS } from "../layouts/main-service";
-import { useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 
 export function Services() {
-    useEffect(() => {
-        document.title = 'Services | FBStormX';
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute(
-                'content', 
-                'From minor repairs to everyday home projects, FB StormX assists homeowners with the jobs they have been putting off.'
-            );
-        }
-    }, []);
     return (
         <div className="body_init">
             <>
+                <Helmet>
+                    <title>Services | FBStormX</title>
+                    <meta name="description" content="From minor repairs to everyday home projects, FB StormX assists homeowners with the jobs they have been putting off." />
+                    <link rel="canonical" href="https://fbstormx.com/services" />
+                </Helmet>
                 <NavBar />
                 <MainS />
                 <Footer />
