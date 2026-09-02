@@ -2,8 +2,14 @@ import { Footer } from "../layouts/footer";
 import { NavBar } from "../layouts/header";
 import { Main } from "../layouts/main_init";
 import { useEffect } from "react";
+import {Helmet} from 'react-helmet-async';
 
 export function Init() {
+    <Helmet>
+        <title>FBStormX</title>
+        <meta name="description" content="A website that guides you to repair small things." />
+        <link rel="canonical" href="https://fbstormx.com/" />
+    </Helmet>
     const inicializarRastreo = () => {
         if (typeof window === 'undefined') return;
 

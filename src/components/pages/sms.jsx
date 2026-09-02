@@ -1,6 +1,7 @@
 import { Footer } from "../layouts/footer";
 import { NavBar } from "../layouts/header";
 import { SmsTerms } from "../layouts/sms-terms";
+import { Helmet } from 'react-helmet-async';
 
 export function Sms() {
     return (

@@ -1,10 +1,560 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/logo.png">
+    <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';
+  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';
+  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';
+  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';
+  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';
+  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';
+  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';
+  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';
+  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';
+  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';
+  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';
+  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';
+  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';
+  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';
+  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';
+  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';
+  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';
+  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';
+  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';
+  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285714em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left,
+.svg-inline--fa .fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-pull-right,
+.svg-inline--fa .fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xs {
+  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-sm {
+  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-lg {
+  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xl {
+  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-2xl {
+  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+/* Heads Up: Bordered Icons will not be supported in the future!
+  - This feature will be deprecated in the next major release of Font Awesome (v8)!
+  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+*/
+/* Notes:
+* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+* --@{v.$css-prefix}-border-padding =
+  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+*/
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, 0.1875em 0.25em);
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right,
+.fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff);
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  --fa-width: 1.25em;
+  height: 1em;
+  width: var(--fa-width);
+}
+.svg-inline--fa.fa-stack-2x {
+  --fa-width: 2.5em;
+  height: 2em;
+  width: var(--fa-width);
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  z-index: var(--fa-stack-z-index, auto);
+}</style><link rel="icon" href="/logo.png">
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="https://use.typekit.net/jxa6ydq.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A website that guides you to repair small things.">
     <!-- Google Tag Manager -->
     <script src="https://connect.facebook.net/signals/config/1754481665748122?v=2.9.390&amp;r=stable&amp;domain=localhost&amp;hme=a767ae4c6a92a40ee4d7e358a937ad845c8bdb98a3bbe3412069dded3a7be57d&amp;ex_m=115%2C221%2C166%2C26%2C80%2C81%2C158%2C76%2C75%2C11%2C176%2C100%2C20%2C150%2C138%2C45%2C83%2C88%2C146%2C171%2C178%2C31%2C17%2C30%2C18%2C32%2C33%2C34%2C36%2C54%2C159%2C85%2C123%2C22%2C24%2C50%2C46%2C48%2C47%2C93%2C102%2C106%2C121%2C157%2C160%2C52%2C122%2C28%2C25%2C130%2C77%2C42%2C162%2C161%2C163%2C154%2C152%2C29%2C41%2C65%2C120%2C173%2C78%2C21%2C125%2C91%2C74%2C23%2C95%2C96%2C127%2C94%2C148%2C147%2C151%2C107%2C172%2C175%2C40%2C55%2C124%2C53%2C8%2C4%2C5%2C7%2C6%2C3%2C101%2C112%2C179%2C188%2C235%2C82%2C248%2C247%2C246%2C14%2C27%2C39%2C61%2C114%2C67%2C10%2C71%2C108%2C109%2C110%2C116%2C141%2C37%2C35%2C143%2C144%2C145%2C140%2C139%2C167%2C84%2C170%2C168%2C169%2C56%2C66%2C134%2C19%2C174%2C51%2C297%2C298%2C299%2C296%2C312%2C335%2C228%2C217%2C68%2C218%2C216%2C338%2C329%2C58%2C229%2C118%2C142%2C90%2C132%2C60%2C131%2C137%2C136%2C64%2C72%2C70%2C164%2C86%2C87%2C126%2C43%2C38%2C59%2C62%2C111%2C177%2C1%2C135%2C16%2C133%2C12%2C2%2C63%2C103%2C15%2C73%2C69%2C129%2C99%2C98%2C181%2C182%2C104%2C105%2C9%2C113%2C180%2C57%2C155%2C97%2C89%2C79%2C128%2C117%2C49%2C156%2C0%2C92%2C149%2C153%2C165%2C44%2C119%2C13%2C183" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TXG55JCH"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -27,12 +577,18 @@
     </script>
     <!-- End Meta Pixel Code -->
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <title>FBStormX</title>
-    <script type="module" crossorigin="" src="/assets/index-DOiRujT5.js"></script>
+    <title>Junk Removal South Florida | FB StormX</title><title>FBStormX</title>
+    <script type="module" crossorigin="" src="/assets/index-BazPk7EF.js"></script>
     <link rel="stylesheet" crossorigin="" href="/assets/index-uenwIcLd.css">
-  </head>
+  <meta name="description" content="Garage, patio or storage full of things you no longer need? FB StormX provides junk removal and cleanouts across South Florida. Free consultation."><link rel="canonical" href="https://fbstormx.com/services/junk-removal-south-florida"></head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="body_init"><header class="header"><a href="/" data-discover="true"><img alt="logo" class="logo" src="/assets/LOGO_FBSTORMX-22-D7InKK71.png"></a><nav class="navbar "><ul class="list_menu_links"><li><a class="a_menu_links" href="/" data-discover="true">Home</a></li><li class="links-li container-submenu"><a class="a_menu_links submenu-btn">Services</a><ul class="submenu"><li><a class="a_menu_links sub_a_menu_links" href="/services/window-repair-south-florida" data-discover="true">Window Repair</a></li><li><a class="a_menu_links sub_a_menu_links" href="/services/sliding-front-door-repair-south-florida" data-discover="true">Glass Door Repair</a></li><li><a class="a_menu_links sub_a_menu_links" href="/services/caulking-water-intrusion-south-florida" data-discover="true">Caulking Services</a></li><li><a class="a_menu_links sub_a_menu_links" href="/services/roof-repair-south-florida" data-discover="true">Roof Leak Repair</a></li><li><a class="a_menu_links sub_a_menu_links" href="/services/junk-removal-south-florida" data-discover="true">Junk Removal</a></li><li><a class="a_menu_links sub_a_menu_links" href="/services/decorative-glass-door-inserts-south-florida" data-discover="true">Glass Door Inserts</a></li></ul></li><li><a class="a_menu_links" href="/us" data-discover="true">Why choose us</a></li><li><a class="a_menu_links" href="/contact" data-discover="true">Contact</a></li><li><a href="https://www.instagram.com/fbstormx/" class="a_menu_links"><svg data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram i-social" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61589730987278" class="a_menu_links"><svg data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook i-social" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"></path></svg></a></li></ul></nav><svg data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars menu-bars " role="img" viewBox="0 0 448 512" aria-hidden="true" alt="menu"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></header><section class="front-page" id="junk-removal-img"><div class="animar-base fade-right mostrar "><h1 class="title_main">Junk Removal and Cleanouts in <span>South Florida</span></h1><p class="fp-subtitle">Ready to Reclaim <span>Your Space?</span></p><p class="fp-desc">The garage you have been meaning to organize. The patio furniture that did not survive the last storm. The
+                    boxes that have been sitting in storage for years. Unwanted items can accumulate quickly and make useful
+                    areas of your home difficult to enjoy. FB StormX provides convenient junk removal and cleanout services
+                    throughout South Florida, so you can clear the clutter without handling the heavy lifting yourself.</p><p class="fp-subdesc">Clear the Clutter. <span>Reclaim Your Space.</span></p></div></section><section class="section3_main"><h2 class="h2-service">Junk Removal Services</h2><div class="section3-container"><div class="div-services"><div class="elem-service"><img alt="unwanted items" class="elem-img" src="data:image/png;base64,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"><p class="elem-p-service">Unwanted household items</p></div><div class="elem-service"><img alt="package" class="elem-img" src="data:image/png;base64,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"><p class="elem-p-service">Boxes and packaging materials</p></div><div class="elem-service"><img alt="yard" class="elem-img" src="data:image/png;base64,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"><p class="elem-p-service">Yard and storm-related debris</p></div><div class="elem-service"><img alt="cleanup" class="elem-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAEkklEQVR4Aeyaz48URRTHX1XvrNloQozcPABGT3rypPFuXJdp4q8/wJh44LCBxJP/Ahc8ePDCPyAanRjjwYuJ0RMnOEIghIQDhHCAwM40U7w3s7uZqn49W9Wvp7sHXqdrtt/r9636vk/XQna3LeghIqAARfgAFOCLAnAytN9NcvP/ODc3lw2qoVph343JO9+B49Pw/iS3DgxcADAfGDAnzZJBNVRLGtJCx0enAN0OvG6svVKXAWlpjrr6JnSdAiwye1vaRBNzSDx0ChCNv4ZDejYxR20PXQMsGS/G01PLRknQcaJ3ALf+glvLRse8Ssv3DmDJYc8TClD4gF5GgEJkvlwB+jySIwWYjMwXKECfR3KkAJOR+QIF6PNIjhRgMjJfoAB9HsmRAkxG5gsUoM8jOVKAych8gQL0eSRHCjAZmS9YE4C+6T5FClD4NBSgAhQSEMp1BypAIQGhXHegAhQSEMp1BypAIQGhXHfgOgB0Qzj+5BM4GQ7Oe1gTxrEaWpOrbTrX+A7cy7PPi9zeoRcgD0Zh7L2NTXszHFwzYU0Yx2pozYP16St5Im+cXpJrDOAkN3+SUQvuFwfwJkhcrUBLnsgbeSSvTS0hBrg3hHfJFIDZhrU5zDZ5Ju9SyyKA9LK3Nfaa1ERXevJOPUjWrw0QF/4BZi+GRyxv4IEDd8u1ONDbgwhngHUXZr1AvaMWwGIIX+DCu0uWvLgxmtrBaGpm4/fpG5sjd6rNMcA1Z2ujB/KCXi/i4E8Du7Oe+LtLs8kA3VdwzBl7mZvVAFzfN30er/Hfba6q/Rx5QV/ncRi8vs45oJ6oN+7eslwywGLP3uUmRGOX8Em/w93rU448klfOU1VvXO1BLgng5DR8jMItHMHpLqOxb4Jkb8O5V8d9F23t9xjtPQmgyewf4cz4NO8PRrj5wxs9j8kzeQ9tcj2GNYtxNEC3Da84B4NFMV1ndtr7b1vyyQ3OO/VIvXL1XC4a4GTDni1N4OCx+Q0ewpoeM+/YQ2if7TUs2o+jAeJ/X9/vaw6/OGN2D4M1veB64Hqtai8aIE5wHId3bo6eXfISaxhU9FDqtao1D2BVkearCSjAajZRdxRgFKbqIgVYzSbqjgKMwlRdpACr2UTdUYBRmKqLWgFYnLE/jofmv70deK/aSvlOkZuf8e8Xv+JP2ln5Lp95ugNvoebfIrc/8RXNZlcOEP/28Ah/vjxrjPnQZvaqy+HtmBZQhzLzJYD5DH/NVEDE8eRTOJFl9gaA+Qh/GfktzQErPlYOEP2/iuPwfGbs34dBxcX4TPZ1eIvLhTWDgf0nzK06bgOg1wNuqxNeggmcc6UaLhdKnYOSLqxpOm4dYNMNdD3fSw9Q+gAUoJCgAlSAQgJCue5ABSgkIJTrDlSAQgJCuWgHhq/fcjHnj6tbzKGpY6GOcos13HWooZirC3NUV3egr7pSgPD1Wy7mZufqFnOoOYcjPM8t1nDXoYBiri7MUV3dYesKVTcnoADnHGp/KsDa6ObCaIBtvp57xFqtvCo8x3P0ZzTANl/P7cNaR6ObV0QDnJfrZ0hAAYZEEuPnAAAA//8Q5xMiAAAABklEQVQDAD3tN875wkdiAAAAAElFTkSuQmCC"><p class="elem-p-service">Basic cleanup of the cleared area</p></div></div><div class="animar-base fade-right  "><aside class="aside_aproach"><h3 class="aside-title">Our approach</h3><div class="aside-div"><svg data-prefix="far" data-icon="clipboard" class="svg-inline--fa fa-clipboard aside-icon" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M232 96l-80 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l80 0c13.3 0 24 10.7 24 24s-10.7 24-24 24zm0 48c37.1 0 67.6-28 71.6-64L320 80c8.8 0 16 7.2 16 16l0 352c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16L48 96c0-8.8 7.2-16 16-16l16.4 0c4 36 34.5 64 71.6 64l80 0zM291.9 32C279 12.7 257 0 232 0L152 0c-25 0-47 12.7-59.9 32L64 32C28.7 32 0 60.7 0 96L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-352c0-35.3-28.7-64-64-64l-28.1 0z"></path></svg><div><h4>We evaluate</h4><p>We inspect and identify the true source of the problem.</p></div></div><div class="aside-div"><svg data-prefix="far" data-icon="thumbs-up" class="svg-inline--fa fa-thumbs-up aside-icon" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M171.5 38.8C192.3 4 236.5-10 274 7.6l7.2 3.8C316 32.3 330 76.5 312.4 114l0 0-14.1 30 109.7 0 7.4 .4c36.3 3.7 64.6 34.4 64.6 71.6 0 13.2-3.6 25.4-9.8 36 6.1 10.6 9.7 22.8 9.8 36 0 18.3-6.9 34.8-18 47.5 1.3 5.3 2 10.8 2 16.5 0 25.1-12.9 47-32.2 59.9-1.9 35.5-29.4 64.2-64.4 67.7l-7.4 .4-104.1 0c-18 0-35.9-3.4-52.6-9.9l-7.1-3-.7-.3-6.6-3.2-.7-.3-12.2-6.5c-12.3-6.5-23.3-14.7-32.9-24.1-4.1 26.9-27.3 47.4-55.3 47.4l-32 0c-30.9 0-56-25.1-56-56L0 200c0-30.9 25.1-56 56-56l32 0c10.8 0 20.9 3.1 29.5 8.5l50.1-106.5 .6-1.2 2.7-5 .6-.9zM56 192c-4.4 0-8 3.6-8 8l0 224c0 4.4 3.6 8 8 8l32 0c4.4 0 8-3.6 8-8l0-224c0-4.4-3.6-8-8-8l-32 0zM253.6 51c-14.8-6.9-32.3-1.6-40.7 12l-2.2 4-56.8 120.9c-3.5 7.5-5.5 15.5-6 23.7l-.1 4.2 0 112.9 .2 7.9c2.4 32.7 21.4 62.1 50.7 77.7l11.5 6.1 6.3 3.1c12.4 5.6 25.8 8.5 39.4 8.5l104.1 0 2.4-.1c12.1-1.2 21.6-11.5 21.6-23.9l-.2-2.6c-.1-.9-.2-1.7-.4-2.6-2.7-12.1 4.3-24.2 16-28 9.7-3.1 16.6-12.2 16.6-22.8 0-4.3-1.1-8.2-3.1-11.8-6.3-11.1-2.8-25.2 8-32 6.8-4.3 11.2-11.8 11.2-20.2 0-7.1-3.1-13.5-8.2-18-5.2-4.6-8.2-11.1-8.2-18s3-13.4 8.2-18c5.1-4.5 8.2-10.9 8.2-18l-.1-2.4c-1.1-11.3-10.1-20.3-21.4-21.4l-2.4-.1-147.5 0c-8.2 0-15.8-4.2-20.2-11.1-4.4-6.9-5-15.7-1.5-23.1L269 93.6c7-15 1.4-32.7-12.5-41L253.6 51z"></path></svg><div><h4>We recommend</h4><p>We explain your options clearly and honestly.</p></div></div><div class="aside-div"><svg data-prefix="fas" data-icon="wrench" class="svg-inline--fa fa-wrench aside-icon" role="img" viewBox="0 0 576 512" aria-hidden="true"><path fill="currentColor" d="M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z"></path></svg><div><h4>We repair</h4><p>We fix it right and often in a single visit.</p></div></div></aside></div></div></section><section class="sec-service-desc"><div class="div-data-services div-data-doorR"><div class="elem-data-service"><h2>What's included</h2><ul><li class="li-data-service">Unwanted household items.</li><li class="li-data-service">Old patio furniture.</li><li class="li-data-service">Garage and storage clutter.</li><li class="li-data-service">Boxes and packaging materials.</li><li class="li-data-service">Yard and storm-related debris.</li><li class="li-data-service">Items left after minor home projects.</li><li class="li-data-service">Basic cleanup of the cleared area</li></ul><p>Removal is subject to the type, size, weight, volume, accessibility, and disposal requirements of the items.</p></div><div class="elem-data-service"><h2>Add it to a visit you already have scheduled</h2><p class="p-data-service">When scheduling and capacity allow, we can take care of the repair and remove unwanted items during one convenient visit.</p><p class="p-data-service">Already scheduling FB StormX for a home repair? Ask about adding junk removal to the same appointment.</p><p class="fp-subdesc">One Visit. More Accomplished.</p></div></div><h2 class="h2-FAQ">Frequently Asked Questions</h2><article class="art-FAQ"><details class="accordion"><summary class="accordion-summary"><span class="accordion-title"><svg data-prefix="far" data-icon="circle-question" class="svg-inline--fa fa-circle-question accordion-icon" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M464 256a208 208 0 1 0 -416 0 208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zm256-80c-17.7 0-32 14.3-32 32 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-44.2 35.8-80 80-80s80 35.8 80 80c0 47.2-36 67.2-56 74.5l0 3.8c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-8.1c0-20.5 14.8-35.2 30.1-40.2 6.4-2.1 13.2-5.5 18.2-10.3 4.3-4.2 7.7-10 7.7-19.6 0-17.7-14.3-32-32-32zM224 368a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path></svg>Do I need to move everything outside first?</span><span><svg data-prefix="fas" data-icon="angle-up" class="svg-inline--fa fa-angle-up arrow" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M169.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 205.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"></path></svg></span></summary><div class="accordion-wrapper"><div class="accordion-content"><p class="accordion-p">No. In most cases, our team can remove approved items from the garage, patio, storage area, or another
+                        accessible location. Let us know in advance about stairs, narrow access points, large or heavy objects.</p></div></div></details><details class="accordion"><summary class="accordion-summary"><span class="accordion-title"><svg data-prefix="fas" data-icon="ban" class="svg-inline--fa fa-ban accordion-icon" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M367.2 412.5L99.5 144.8c-22.4 31.4-35.5 69.8-35.5 111.2 0 106 86 192 192 192 41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3c22.4-31.4 35.5-69.8 35.5-111.2 0-106-86-192-192-192-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0z"></path></svg>Is there anything you cannot take?</span><span><svg data-prefix="fas" data-icon="angle-up" class="svg-inline--fa fa-angle-up arrow" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M169.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 205.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"></path></svg></span></summary><div class="accordion-wrapper"><div class="accordion-content"><p class="accordion-p">Yes. We do not remove hazardous, toxic, flammable, biological, or otherwise regulated materials. Certain
+                        appliances, chemicals, paints, fuels, batteries, construction materials, and oversized items may also require
+                        special handling or may not be accepted. Send us photos in advance so we can confirm what can be removed.</p></div></div></details><details class="accordion"><summary class="accordion-summary"><span class="accordion-title"><svg data-prefix="fas" data-icon="dollar-sign" class="svg-inline--fa fa-dollar-sign accordion-icon" role="img" viewBox="0 0 320 512" aria-hidden="true"><path fill="currentColor" d="M136 24c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 56 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-114.9 0c-24.9 0-45.1 20.2-45.1 45.1 0 22.5 16.5 41.5 38.7 44.7l91.6 13.1c53.8 7.7 93.7 53.7 93.7 108 0 60.3-48.9 109.1-109.1 109.1l-10.9 0 0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40-72 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l130.9 0c24.9 0 45.1-20.2 45.1-45.1 0-22.5-16.5-41.5-38.7-44.7l-91.6-13.1C55.9 273.5 16 227.4 16 173.1 16 112.9 64.9 64 125.1 64l10.9 0 0-40z"></path></svg>How is the service priced?</span><span><svg data-prefix="fas" data-icon="angle-up" class="svg-inline--fa fa-angle-up arrow" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M169.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 205.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"></path></svg></span></summary><div class="accordion-wrapper"><div class="accordion-content"><p class="accordion-p">Pricing is based on the volume, size, weight, accessibility, labor, and disposal requirements of the items.</p></div></div></details><details class="accordion"><summary class="accordion-summary"><span class="accordion-title"><svg data-prefix="fas" data-icon="magnifying-glass" class="svg-inline--fa fa-magnifying-glass accordion-icon" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>Looking for Junk Removal in South Florida?</span><span><svg data-prefix="fas" data-icon="angle-up" class="svg-inline--fa fa-angle-up arrow" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M169.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L192 205.3 54.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"></path></svg></span></summary><div class="accordion-wrapper"><div class="accordion-content"><p class="accordion-p">Send us your ZIP code and a few photos through WhatsApp for a quick, free initial evaluation.</p></div></div></details><div class="container-btn-book"><h3 class="h3-btn-book">Book Your Free Consultation</h3><p class="p-btn-book">We will evaluate the problem, explain your options, and provide a clear estimate.</p><a class="btn_schedule btn_book" href="/" data-discover="true"><span><svg data-prefix="fas" data-icon="address-book" class="svg-inline--fa fa-address-book" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M96 0C60.7 0 32 28.7 32 64l0 384c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L96 0zM208 288l64 0c44.2 0 80 35.8 80 80 0 8.8-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16 0-44.2 35.8-80 80-80zm-24-96a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64zm0 128c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64zM496 320c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16s16-7.2 16-16l0-64c0-8.8-7.2-16-16-16z"></path></svg> Schedule Now</span></a></div></article></section><footer class="footer"><div class="d-footer-icons"><div class="d-elem-footer"><svg data-prefix="fas" data-icon="location-dot" class="svg-inline--fa fa-location-dot icon-footer" role="img" viewBox="0 0 384 512" aria-hidden="true" style="color: rgb(251, 250, 250);"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"></path></svg><p class="p-footer">South Florida</p></div><div class="d-elem-footer"><svg data-prefix="far" data-icon="clock" class="svg-inline--fa fa-clock icon-footer" role="img" viewBox="0 0 512 512" aria-hidden="true" style="color: rgb(251, 250, 250);"><path fill="currentColor" d="M464 256a208 208 0 1 1 -416 0 208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0 256 256 0 1 0 -512 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path></svg><p class="p-footer"> On-time services</p></div><div class="d-elem-footer"><svg data-prefix="far" data-icon="circle-check" class="svg-inline--fa fa-circle-check icon-footer" role="img" viewBox="0 0 512 512" aria-hidden="true" style="color: rgb(251, 250, 250);"><path fill="currentColor" d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zm0-464a208 208 0 1 0 0 416 208 208 0 1 0 0-416zm70.7 121.9c7.8-10.7 22.8-13.1 33.5-5.3 10.7 7.8 13.1 22.8 5.3 33.5L243.4 366.1c-4.1 5.7-10.5 9.3-17.5 9.8-7 .5-13.9-2-18.8-6.9l-55.9-55.9c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l36 36 105.6-145.2z"></path></svg><p class="p-footer"> Satisfaction guaranteed</p></div><div class="d-elem-footer"><svg data-prefix="fas" data-icon="shield-halved" class="svg-inline--fa fa-shield-halved icon-footer" role="img" viewBox="0 0 512 512" aria-hidden="true" style="color: rgb(251, 250, 250);"><path fill="currentColor" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.8 82.8c22 9.3 38.4 31 38.3 57.2-.5 99.2-41.3 280.7-213.6 363.2-16.7 8-36.1 8-52.8 0-172.4-82.5-213.1-264-213.6-363.2-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.9 1 251.4 0 256 0zm0 66.8l0 378.1c138-66.8 175.1-214.8 176-303.4l-176-74.6 0 0z"></path></svg><p class="p-footer"> Licensed and insured</p></div></div><div class="middle-sec-footer"><div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.851199115654!2d-80.34039842560075!3d25.808482706672322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b963fcd0d1d3%3A0x4e44ddc097b5d9d7!2s3750%20NW%2087th%20Ave%20Ste%20700%2C%20Doral%2C%20FL%2033178%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1786754245617!5m2!1ses-419!2sar" title="FB stormX" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="areas-footer"><h3>Service areas</h3><h4>Serving homeowners across South Florida including</h4><div><ul><li>Doral</li><li>Hialeah</li><li>Miami Lakes</li><li>Kendall</li><li>Westchester</li><li>South Miami</li><li>Miami Springs</li><li>Sweetwater</li><li>Palmetto Bay</li></ul><ul><li>Cutler Bay</li><li>Homestead</li><li>Pembroke Pines</li><li>Miramar</li><li>Weston</li><li>Davie</li><li>Plantation</li><li>Hollywood</li><li>Fort Lauderdale</li></ul></div></div><div class="media-footer"><a href="https://www.instagram.com/fbstormx/" class="a-media-footer"><svg data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram i-media-footer" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a><a href="https://www.facebook.com/profile.php?id=61589730987278" class="a-media-footer"><svg data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook i-media-footer" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"></path></svg></a><a href="https://www.youtube.com/@FBStormX/featured" class="a-media-footer"><svg data-prefix="fab" data-icon="youtube" class="svg-inline--fa fa-youtube i-media-footer" role="img" viewBox="0 0 576 512" aria-hidden="true"><path fill="currentColor" d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z"></path></svg></a></div></div><div class="footer-rights"><hr><address>© Copyright2026 All Rights Reserved</address><p>View our <a href="/privacy-policy">Privacy Policy</a> and <a href="/sms-terms"> Terms &amp;Conditions</a>.</p></div></footer></div></div>
   
   
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXG55JCH"
