@@ -28,7 +28,7 @@ export function NavBar() {
     
     return (
         <header className="header">
-            <img src={logo} alt="logo" className="logo" />
+            <Link to="/"><img src={logo} alt="logo" className="logo" /></Link>
             <nav className={`navbar ${isOpen ? 'menu-open' : ''}`}>
                 <ul className="list_menu_links">
                     <li><Link to="/" className="a_menu_links">Home</Link></li>

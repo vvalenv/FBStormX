@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 import Card from "./UXcomponents";
-import { GoogleReviews } from "./UXcomponents";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { Link } from 'react-router-dom';
 //import ReCAPTCHA from "react-google-recaptcha";
@@ -120,7 +119,6 @@ export function Main() {
                     <Card nombre="Decorative Glass Doors" img="door1.jpg" ir='/services/decorative-glass-door-inserts-south-florida'/>
                 </div>
             </section>
-            <GoogleReviews />
             <section className="section2_main">
                 <h2 className="title_main secondary-t">Are Any of These Issues Familiar?</h2>
                 <ul>

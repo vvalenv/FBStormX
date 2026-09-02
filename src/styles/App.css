@@ -61,104 +61,6 @@ h1,h2,h3,h4 {
   transform: scale(0.8);
 }
 
-/*GOOGLE REVIEWS*/
-
-.reviews-wrapper {
-  width: 100%;
-  padding: 1.5rem 0;
-  background-color: #011337;
-}
-
-.reviews-title {
-  font-size: 2rem;
-  color: #fbfafa;
-}
-
-.reviews-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.reviews-score {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.rating-number {
-  font-weight: bold;
-  color: #fbfafa;
-}
-
-.stars {
-  color: #fbbc04; /* Color característico de Google */
-}
-
-.total-reviews {
-  color: #fbfafa;
-  font-size: 0.9rem;
-}
-
-/* Grilla de reseñas en columna para móviles */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin: 0 1em;
-}
-
-.review-card {
-  background: #fbfafa;
-  border-radius: 10px;
-  padding: 1.25rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  border: 1px solid #eaeaea;
-  display: flex;
-  flex-direction: column;
-}
-
-.review-card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.review-card-header img {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-}
-
-.review-card-header strong {
-  display: block;
-  font-size: 0.95rem;
-}
-
-.review-time {
-  font-size: 0.8rem;
-  color: #888;
-}
-
-.review-rating {
-  color: #fbbc04;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-.review-text {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #333;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 /*SERVICE*/
 
 .div-service {
@@ -195,6 +97,7 @@ h1,h2,h3,h4 {
   display: grid;
   grid-template-rows: 170px auto;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card-s:hover .card-p {
@@ -231,6 +134,7 @@ h1,h2,h3,h4 {
 
 .btn_schedule {
   display: inline-block;
+  text-decoration: none;
   padding: 1em .75rem;
   border-radius: 10px;
   word-break: break-word;
@@ -247,9 +151,16 @@ h1,h2,h3,h4 {
   z-index: 1;
 }
 
+.btn_schedule span {
+  text-decoration: none;
+  color: #011337;
+  transition: all .3s;
+}
+
 .btn_schedule a {
   text-decoration: none;
   color: #011337;
+  transition: all .3s;
 }
 
 .btn_schedule:after {
@@ -281,11 +192,11 @@ h1,h2,h3,h4 {
   color: #011337;
 }
 
-.btn_schedule a {
-  transition: all .3s;
+.btn_schedule:hover span {
+  color: #fbfafa;
 }
 
-.btn_schedule:hover a {
+.btn_schedule:hover a{
   color: #fbfafa;
 }
 
@@ -515,13 +426,6 @@ h1,h2,h3,h4 {
     display: inline;
   }
 
-  /*GOOGLE REVIEWS*/
-
-  .reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
   /*BOTON*/
 
   .btn_schedule {
@@ -686,11 +590,6 @@ h1,h2,h3,h4 {
 }
 
 @media screen and (min-width: 950px) {
-  /*GOOGLE REVIEWS*/
-
-  .reviews-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 
   /*cards*/
 
