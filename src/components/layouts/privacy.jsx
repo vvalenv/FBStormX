@@ -96,6 +96,7 @@ export function PrivacyPage() {
                         services, such as customer service, solely as necessary to perform those services. All other
                         use-case categories exclude text messaging originator opt-in data and consent; this
                         information will not be shared with any third parties.</b></p>
+                    <p>Message frequency varies depending on your interactions with FB StormX and the communications you have authorized.</p>
                     <p>Text messaging opt-in data and consent will not be sold, rented, or disclosed to third parties for their
                         own marketing or promotional purposes.</p>
                     <p>Opting out of text messages does not prevent us from contacting you through other methods when
