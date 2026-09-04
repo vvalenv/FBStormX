@@ -241,14 +241,14 @@ h1,h2,h3,h4 {
 
   .form-group-checkbox {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     grid-column: span 4;
-    gap: 10px;
+    align-items: center;
+    gap: 10px;  
   }
 
-  .form-group-checkbox input {
-    width: 20px;
-    height: 20px;
+  .form-group-checkbox label {
+    font-size: 0.6em;
   }
 
   .form-group input,textarea,select {
@@ -279,8 +279,7 @@ h1,h2,h3,h4 {
   }
 
   .p-subtext-terms {
-    grid-column: span 4;
-    font-size: 0.7em;
+    font-size: 0.5em;
   }
 
   .submit-contact:hover {
@@ -465,10 +464,6 @@ h1,h2,h3,h4 {
 
   .form-group {
     grid-column: span 2;
-  }
-
-  .form-group-checkbox {
-    grid-column: 2 / span 3;
   }
 
   .d-textarea {

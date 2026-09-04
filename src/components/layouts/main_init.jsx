@@ -89,17 +89,15 @@ export function Main() {
                                 <textarea id="description" name="description"></textarea>
                             </div>
                             <div className="form-group-checkbox">
-                                <label htmlFor="00NPj000005tyVL">Email Marketing Consent:</label>
-                                <input  id="00NPj000005tyVL" name="00NPj000005tyVL" type="checkbox" value="1" />
-                            </div>
-                            <div className="form-group-checkbox">
-                                <label htmlFor="00NPj000005tyVM">SMS Marketing Consent:</label>
+                                <label htmlFor="00NPj000005tyVM" className="p-subtext-terms">By checking this box, I agree to receive customer care and informational text messages from FB StormX at the mobile number provided, including responses to inquiries, appointment confirmations and reminders, scheduling updates, service notifications, estimates, and customer support messages. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. 
+                                    I have read and agree to the <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/sms-terms">Terms &amp; Conditions</Link>.</label>
                                 <input  id="00NPj000005tyVM" name="00NPj000005tyVM" type="checkbox" value="1" />
                             </div>
-                            <p className="p-subtext-terms">I agree to receive recurring marketing and informational text messages from FBStormX at the
-                                phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to
-                                unsubscribe or HELP for help. Consent is not a condition of purchase. View our <Link to="/privacy-policy">Privacy Policy</Link> and 
-                                <Link to="/sms-terms">SMS Terms &amp;Conditions</Link>.</p>
+                            <div className="form-group-checkbox">
+                                <label htmlFor="00NPj000005tyVL" className="p-subtext-terms">By checking this box, I agree to receive recurring marketing and promotional text messages from FB StormX at the mobile number provided, including information about services, special offers, and promotions. Messages may be sent using automated technology. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. 
+                                    Consent is not a condition of purchase. I have read and agree to the <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/sms-terms">Terms &amp; Conditions</Link>.</label>
+                                <input  id="00NPj000005tyVL" name="00NPj000005tyVL" type="checkbox" value="1" />
+                            </div>
                             <input type="submit" name="submit" className="submit-contact" value="Send"/>
                         </form>
                     </div>
