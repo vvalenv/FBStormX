@@ -91,18 +91,13 @@ export function PrivacyPage() {
                         customer support, account or service updates, and, when separately authorized, promotional offers.</p>
                     <p>Consent to receive marketing text messages is not a condition of purchasing any goods or services.
                         Message frequency may vary. Message and data rates may apply.</p>
-                    <p><b>No mobile information will be shared with third parties or affiliates for marketing or
-                        promotional purposes. Information may be shared with subcontractors that provide support
-                        services, such as customer service, solely as necessary to perform those services. All other
-                        use-case categories exclude text messaging originator opt-in data and consent; this
-                        information will not be shared with any third parties.</b></p>
+                    <p><b>We do not share, sell, or rent mobile opt-in data (phone numbers provided for SMS) or SMS consent with third parties or affiliates for their marketing or promotional purposes. While we may share other information with service providers who assist our business operations, mobile opt-in data and SMS consent are excluded from such sharing except as strictly necessary to deliver the SMS service itself (e.g., our messaging platform provider).</b></p>
                     <p>Message frequency varies depending on your interactions with FB StormX and the communications you have authorized.</p>
                     <p>Text messaging opt-in data and consent will not be sold, rented, or disclosed to third parties for their
                         own marketing or promotional purposes.</p>
                     <p>Opting out of text messages does not prevent us from contacting you through other methods when
                         permitted by law and reasonably necessary to respond to a request, administer an existing service
                         relationship, or fulfill a legal obligation.</p>
-                    <p>We do not share, sell, or rent mobile opt-in data (phone numbers provided for SMS) or SMS consent with third parties or affiliates for their marketing or promotional purposes. While we may share other information with service providers who assist our business operations, mobile opt-in data and SMS consent are excluded from such sharing except as strictly necessary to deliver the SMS service itself (e.g., our messaging platform provider).</p>
                 </div>
                 <div>
                     <h3><li>How We Share Information</li></h3>
