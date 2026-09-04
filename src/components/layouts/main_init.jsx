@@ -99,7 +99,7 @@ export function Main() {
                             <p className="p-subtext-terms">I agree to receive recurring marketing and informational text messages from FBStormX at the
                                 phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to
                                 unsubscribe or HELP for help. Consent is not a condition of purchase. View our <Link to="/privacy-policy">Privacy Policy</Link> and 
-                                <Link to="/sms-terms"> Terms &amp;Conditions</Link>.</p>
+                                <Link to="/sms-terms">SMS Terms &amp;Conditions</Link>.</p>
                             <input type="submit" name="submit" className="submit-contact" value="Send"/>
                         </form>
                     </div>

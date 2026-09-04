@@ -101,6 +101,7 @@ export function PrivacyPage() {
                     <p>Opting out of text messages does not prevent us from contacting you through other methods when
                         permitted by law and reasonably necessary to respond to a request, administer an existing service
                         relationship, or fulfill a legal obligation.</p>
+                    <p>We do not share, sell, or rent mobile opt-in data (phone numbers provided for SMS) or SMS consent with third parties or affiliates for their marketing or promotional purposes. While we may share other information with service providers who assist our business operations, mobile opt-in data and SMS consent are excluded from such sharing except as strictly necessary to deliver the SMS service itself (e.g., our messaging platform provider).</p>
                 </div>
                 <div>
                     <h3><li>How We Share Information</li></h3>
