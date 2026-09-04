@@ -3,7 +3,7 @@ export function SmsTerms() {
         <main className="main-policy">
             <h1>SMS TERMS AND CONDITIONS</h1>
             <p><b>Effective Date:</b> 08/2026</p>
-            <p><b>Last Updated:</b> 08/2026</p>
+            <p><b>Last Updated:</b> 09/2026</p>
             <p>These SMS Terms and Conditions (“SMS Terms”) govern the text messaging program operated by
                 FB StormX (“FB StormX,” “we,” “us,” or “our”).  </p>
             <p>By voluntarily opting in to receive SMS messages from FB StormX, you acknowledge that you have
@@ -100,8 +100,6 @@ export function SmsTerms() {
                     <p>No mobile information will be shared with third parties or affiliates for marketing or promotional
                         purposes. Information may be shared with subcontractors that provide support services, such as
                         customer service, solely as necessary to perform those services.</p>
-                    <p>All other use-case categories exclude text messaging originator opt-in data and consent; this
-                        information will not be shared with any third parties.</p>
                     <p>Text messaging opt-in data and consent will not be sold, rented, or disclosed to third parties for their
                         own marketing or promotional purposes.</p>
                 </div>
@@ -151,7 +149,7 @@ export function SmsTerms() {
                     <p>FB StormX may update these SMS Terms periodically to reflect changes in its messaging practices,
                         services, technology, or legal obligations.</p>
                     <p>The revised SMS Terms will be posted on this page with an updated “Last Updated” date. Material
-                        changes will be communicated or renewed consent will be obtained when required by applicable law..</p>
+                        changes will be communicated or renewed consent will be obtained when required by applicable law.</p>
                     <p>Your continued participation in the SMS program after an update will be governed by the revised
                         SMS Terms, subject to any additional consent requirements imposed by law.</p>
                 </div>

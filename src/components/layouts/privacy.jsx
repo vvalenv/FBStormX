@@ -3,7 +3,7 @@ export function PrivacyPage() {
         <main className="main-policy">
             <h1>Privacy Policy</h1>
             <p><b>Effective Date:</b> 08/2026</p>
-            <p><b>Last Updated:</b> 08/2026</p>
+            <p><b>Last Updated:</b> 09/2026</p>
             <p>FB StormX (“FB StormX,” “we,” “us,” or “our”) respects your privacy and is committed to protecting
                 the personal information you provide to us.</p>
             <p>This Privacy Policy explains what information we collect, how we use and protect it, when it may be
@@ -101,7 +101,9 @@ export function PrivacyPage() {
                 </div>
                 <div>
                     <h3><li>How We Share Information</li></h3>
-                    <p>We do not sell or rent personal information.</p>
+                    <p>We do not share, sell, or rent mobile opt-in data (phone numbers provided for SMS) or SMS consent with third parties or affiliates for their marketing or promotional purposes. 
+                        While we may share other information with service providers who assist our business operations, mobile opt-in data and SMS consent are excluded from such sharing except as strictly necessary to deliver the SMS service itself (e.g., our messaging platform provider). We may also disclose information to comply with law, respond to lawful requests, protect rights or safety, investigate fraud, or enforce agreements.</p>
+                    <p>Text messaging opt-in data and consent will not be shared with any third parties or affiliates for marketing or promotional purposes.</p>
                     <p>We may disclose limited personal information to service providers or subcontractors that assist us
                         with legitimate business functions, including:</p>
                     <ul>
